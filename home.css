@@ -10,11 +10,11 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+/* ✅ FIXED (no overlap now) */
 .marquee-box{
-    position: absolute;
-    top:50%;
     width:100%;
-    transform: translateY(-50%);
+    text-align:center;
+    margin-top: 80px; /* space below navbar */
 }
 
 marquee{
@@ -22,6 +22,7 @@ marquee{
     font-weight: bold;
     color: yellow;
 }
+
 /* NAVBAR */
 .navbar {
     position: fixed;
@@ -33,9 +34,7 @@ marquee{
     justify-content: space-between;
     align-items: center;
 
-  /*  background: url('navbar.png');  🔥 add this */
     background-size: cover;
-
     z-index: 1000;
 }
 
@@ -52,6 +51,7 @@ marquee{
 .logo.hide {
     opacity: 0;
 }
+
 /* NAV LINKS */
 .navbar ul {
     display: flex;
@@ -90,15 +90,15 @@ marquee{
 .hero {
     width: 100%;
 }
-/* IMAGE (MAIN FIX) */
-.bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
 
+/* IMAGE */
+.bg-img {
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-/* BUTTON CENTER */
+/* BUTTON */
 .content {
     position: absolute;
     top: 65%;
@@ -107,7 +107,6 @@ marquee{
     text-align: center;
 }
 
-/* BUTTON */
 .btn {
     padding: 14px 34px;
     background: #5f7742;
@@ -117,11 +116,14 @@ marquee{
     cursor: pointer;
 }
 
+/* ================= MOBILE FIX ================= */
+
 @media (max-width: 768px) {
 
-    /* NAVBAR FIX */
+    /* NAVBAR CLEAN */
     .navbar {
-        padding: 10px 15px;
+        flex-direction: column;
+        padding: 10px;
     }
 
     .logo img {
@@ -132,36 +134,36 @@ marquee{
     .navbar ul {
         gap: 15px;
         top: 0;
-        font-size: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    /* HERO IMAGE */
-    .bg-img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* BIG FIX (removes empty space) */
-    .content {
-        position: static;
-        transform: none;
-        margin-top: 20px;
-    }
-
-    /* BUTTON */
-    .btn {
-        width: 80%;
-        padding: 10px;
-    }
-
-    /* MARQUEE FIX */
+    /* MARQUEE CLEAN */
     .marquee-box {
-        position: static;
-        transform: none;
-        margin: 15px 0;
+        margin-top: 120px;
     }
 
     marquee {
         font-size: 18px;
+    }
+
+    /* IMAGE VERTICAL LOOK */
+    .bg-img {
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    /* REMOVE ABSOLUTE (MAIN FIX) */
+    .content {
+        position: static;
+        transform: none;
+        margin: 20px 0;
+    }
+
+    /* BUTTON */
+    .btn {
+        width: 85%;
+        padding: 12px;
+        font-size: 14px;
     }
 }
