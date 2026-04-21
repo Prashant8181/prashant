@@ -1,117 +1,46 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Under Construction</title>
+<link rel="stylesheet" href="home.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
 
-/* BODY */
-body {
-    font-family: 'Playfair Display', serif;
-}
+<body>
 
-.marquee-box{
-    position: absolute;
-    top:50%;
-    width:100%;
-    transform: translateY(-50%);
-}
+    <div class="marquee-box"> 
+        <marquee behavior="scroll" direction="left">
+             UNDER CONSTRUCTION       
+          </marquee>
 
-marquee{
-    font-size: 30px;
-    font-weight: bold;
-    color: yellow;
-}
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 80px;
+    </div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+    </div>
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-  /*  background: url('navbar.png');  🔥 add this */
-    background-size: cover;
+<!-- HERO -->
+<section class="hero">
 
-    z-index: 1000;
-}
+    <!-- FULL IMAGE -->
+    <img src="illustration.png" class="bg-img">
 
-/* LOGO */
-.logo img {
-    height: 150px;
-    margin-left: -30px;
-}
+    <!-- BUTTON -->
+    <div class="content">
+        <button class="btn">View Projects</button>
+    </div>
 
-.logo {
-    transition: opacity 0.4s ease;
-}
-
-.logo.hide {
-    opacity: 0;
-}
-/* NAV LINKS */
-.navbar ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-
-    position: relative;
-    top: -25px;
-}
-
-.navbar a {
-    position: relative;
-    color: #b23a3a;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-
-    width: 0%;
-    height: 2px;
-    background: #5f7742;
-
-    transition: 0.3s;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
-/* HERO */
-.hero {
-    width: 100%;
-}
-/* IMAGE (MAIN FIX) */
-.bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
-
-    display: block;
-}
-
-/* BUTTON CENTER */
-.content {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* BUTTON */
-.btn {
-    padding: 14px 34px;
-    background: #5f7742;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
+</section>
+<script src="home.js"></script>
+</body>
+</html>
