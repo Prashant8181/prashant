@@ -1,129 +1,8 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
-body {
-    font-family: 'Playfair Display', serif;
-}
-
-/* ✅ FIXED (no overlap now) */
-.marquee-box{
-    width:100%;
-    text-align:center;
-    margin-top: 80px; /* space below navbar */
-}
-
-marquee{
-    font-size: 30px;
-    font-weight: bold;
-    color: yellow;
-}
-
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 80px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-size: cover;
-    z-index: 1000;
-}
-
-/* LOGO */
-.logo img {
-    height: 150px;
-    margin-left: -30px;
-}
-
-.logo {
-    transition: opacity 0.4s ease;
-}
-
-.logo.hide {
-    opacity: 0;
-}
-
-/* NAV LINKS */
-.navbar ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-
-    position: relative;
-    top: -25px;
-}
-
-.navbar a {
-    position: relative;
-    color: #b23a3a;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-
-    width: 0%;
-    height: 2px;
-    background: #5f7742;
-
-    transition: 0.3s;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-}
-
-/* HERO */
-.hero {
-    width: 100%;
-}
-
-/* IMAGE */
-.bg-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* BUTTON */
-.content {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.btn {
-    padding: 14px 34px;
-    background: #5f7742;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* ================= MOBILE FIX ================= */
-
 @media (max-width: 768px) {
 
-    /* NAVBAR CLEAN */
+    /* NAVBAR FIX */
     .navbar {
-        flex-direction: column;
-        padding: 10px;
+        padding: 10px 15px;
     }
 
     .logo img {
@@ -134,36 +13,36 @@ marquee{
     .navbar ul {
         gap: 15px;
         top: 0;
-        justify-content: center;
-        flex-wrap: wrap;
+        font-size: 14px;
     }
 
-    /* MARQUEE CLEAN */
-    .marquee-box {
-        margin-top: 120px;
-    }
-
-    marquee {
-        font-size: 18px;
-    }
-
-    /* IMAGE VERTICAL LOOK */
+    /* HERO IMAGE */
     .bg-img {
-        height: 60vh;
-        object-fit: cover;
+        width: 100%;
+        height: auto;
     }
 
-    /* REMOVE ABSOLUTE (MAIN FIX) */
+    /* BIG FIX (removes empty space) */
     .content {
         position: static;
         transform: none;
-        margin: 20px 0;
+        margin-top: 20px;
     }
 
     /* BUTTON */
     .btn {
-        width: 85%;
-        padding: 12px;
-        font-size: 14px;
+        width: 80%;
+        padding: 10px;
+    }
+
+    /* MARQUEE FIX */
+    .marquee-box {
+        position: static;
+        transform: none;
+        margin: 15px 0;
+    }
+
+    marquee {
+        font-size: 18px;
     }
 }
