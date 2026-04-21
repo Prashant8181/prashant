@@ -115,3 +115,63 @@ marquee{
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+
+    /* HERO IMAGE FULL CONTROL */
+    .hero {
+        position: relative;
+    }
+
+    .bg-img {
+        width: 100%;
+        height: 100vh;          /* full screen */
+        object-fit: cover;
+    }
+
+    /* 🔥 MARQUEE (AUTO PERFECT POSITION) */
+    .marquee-box {
+        position: absolute;
+        top: 55vh;              /* based on screen height */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    marquee {
+        font-size: 18px;
+    }
+
+    /* 🔥 BUTTON (AUTO PERFECT POSITION) */
+    .content {
+        position: absolute;
+        top: 72vh;              /* perfect below text */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    /* NAVBAR SMALL ADJUST */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 70px;
+        margin-left: 0;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        top: -10px;
+        font-size: 14px;
+    }
+
+}
