@@ -1,48 +1,117 @@
-@media (max-width: 768px) {
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* NAVBAR FIX */
-    .navbar {
-        padding: 10px 15px;
-    }
+/* BODY */
+body {
+    font-family: 'Playfair Display', serif;
+}
 
-    .logo img {
-        height: 70px;
-        margin-left: 0;
-    }
+.marquee-box{
+    position: absolute;
+    top:50%;
+    width:100%;
+    transform: translateY(-50%);
+}
 
-    .navbar ul {
-        gap: 15px;
-        top: 0;
-        font-size: 14px;
-    }
+marquee{
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 80px;
 
-    /* HERO IMAGE */
-    .bg-img {
-        width: 100%;
-        height: auto;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    /* BIG FIX (removes empty space) */
-    .content {
-        position: static;
-        transform: none;
-        margin-top: 20px;
-    }
+  /*  background: url('navbar.png');  🔥 add this */
+    background-size: cover;
 
-    /* BUTTON */
-    .btn {
-        width: 80%;
-        padding: 10px;
-    }
+    z-index: 1000;
+}
 
-    /* MARQUEE FIX */
-    .marquee-box {
-        position: static;
-        transform: none;
-        margin: 15px 0;
-    }
+/* LOGO */
+.logo img {
+    height: 150px;
+    margin-left: -30px;
+}
 
-    marquee {
-        font-size: 18px;
-    }
+.logo {
+    transition: opacity 0.4s ease;
+}
+
+.logo.hide {
+    opacity: 0;
+}
+/* NAV LINKS */
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+
+    position: relative;
+    top: -25px;
+}
+
+.navbar a {
+    position: relative;
+    color: #b23a3a;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+    background: #5f7742;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    width: 100%;
+}
+/* IMAGE (MAIN FIX) */
+.bg-img {
+    width: 100%;      /* FULL WIDTH */
+    height: auto;     /* KEEP ORIGINAL RATIO */
+
+    display: block;
+}
+
+/* BUTTON CENTER */
+.content {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* BUTTON */
+.btn {
+    padding: 14px 34px;
+    background: #5f7742;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
