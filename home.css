@@ -10,38 +10,43 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-.marquee-box{
-    position: absolute;
-    top:50%;
-    width:100%;
-    transform: translateY(-50%);
+/* HERO (🔥 IMPORTANT FIX) */
+.hero {
+    width: 100%;
+    position: relative;   /* 🔥 ADD THIS */
 }
 
-marquee{
+/* MARQUEE */
+.marquee-box {
+    position: absolute;
+    top: 55%;   /* slight adjust for better center */
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+marquee {
     font-size: 30px;
     font-weight: bold;
     color: yellow;
 }
+
 /* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 15px 80px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-  /*  background: url('navbar.png');  🔥 add this */
     background-size: cover;
-
     z-index: 1000;
 }
 
 /* LOGO */
 .logo img {
-    height: 150px;
+    height: 140px;   /* small balance fix (was 150) */
     margin-left: -30px;
 }
 
@@ -52,14 +57,14 @@ marquee{
 .logo.hide {
     opacity: 0;
 }
+
 /* NAV LINKS */
 .navbar ul {
     display: flex;
     gap: 40px;
     list-style: none;
-
     position: relative;
-    top: -25px;
+    top: -15px;   /* 🔥 FIXED (was -25 too much) */
 }
 
 .navbar a {
@@ -74,11 +79,9 @@ marquee{
     position: absolute;
     left: 0;
     bottom: -5px;
-
     width: 0%;
     height: 2px;
     background: #5f7742;
-
     transition: 0.3s;
 }
 
@@ -86,27 +89,21 @@ marquee{
     width: 100%;
 }
 
-/* HERO */
-.hero {
-    width: 100%;
-}
-/* IMAGE (MAIN FIX) */
+/* IMAGE */
 .bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
-
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-/* BUTTON CENTER */
+/* BUTTON */
 .content {
     position: absolute;
-    top: 75%;
+    top: 78%;   /* small adjust for better spacing */
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* BUTTON */
 .btn {
     padding: 14px 34px;
     background: #5f7742;
@@ -116,23 +113,22 @@ marquee{
     cursor: pointer;
 }
 
+/* MOBILE (UNCHANGED except stability) */
 @media (max-width: 768px) {
 
-    /* HERO IMAGE FULL CONTROL */
     .hero {
         position: relative;
     }
 
     .bg-img {
         width: 100%;
-        height: 100vh;          /* full screen */
+        height: 100vh;
         object-fit: cover;
     }
 
-    /* 🔥 MARQUEE (AUTO PERFECT POSITION) */
     .marquee-box {
         position: absolute;
-        top: 55vh;              /* based on screen height */
+        top: 55vh;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -144,10 +140,9 @@ marquee{
         font-size: 18px;
     }
 
-    /* 🔥 BUTTON (AUTO PERFECT POSITION) */
     .content {
         position: absolute;
-        top: 72vh;              /* perfect below text */
+        top: 72vh;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -158,7 +153,6 @@ marquee{
         font-size: 14px;
     }
 
-    /* NAVBAR SMALL ADJUST */
     .navbar {
         padding: 10px 20px;
     }
@@ -173,5 +167,4 @@ marquee{
         top: -10px;
         font-size: 14px;
     }
-
 }
