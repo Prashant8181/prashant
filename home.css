@@ -99,7 +99,7 @@ marquee {
 /* BUTTON */
 .content {
     position: absolute;
-    top: 78%;   /* small adjust for better spacing */
+    top: 65%;   /* small adjust for better spacing */
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -128,7 +128,7 @@ marquee {
 
     .marquee-box {
         position: absolute;
-        top: 55vh;
+        top: 40vh;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
