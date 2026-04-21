@@ -101,9 +101,10 @@ marquee{
 /* BUTTON CENTER */
 .content {
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /* BUTTON */
@@ -114,4 +115,53 @@ marquee{
     border: none;
     border-radius: 6px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR FIX */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        height: 70px;
+        margin-left: 0;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        top: 0;
+        font-size: 14px;
+    }
+
+    /* HERO IMAGE */
+    .bg-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* BIG FIX (removes empty space) */
+    .content {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    /* BUTTON */
+    .btn {
+        width: 80%;
+        padding: 10px;
+    }
+
+    /* MARQUEE FIX */
+    .marquee-box {
+        position: static;
+        transform: none;
+        margin: 15px 0;
+    }
+
+    marquee {
+        font-size: 18px;
+    }
 }
