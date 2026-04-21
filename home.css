@@ -19,7 +19,7 @@ body {
 /* MARQUEE */
 .marquee-box {
     position: absolute;
-    top: 55%;   /* slight adjust for better center */
+    top: 45%;   /* slight adjust for better center */
     width: 100%;
     transform: translateY(-50%);
     text-align: center;
@@ -99,7 +99,7 @@ marquee {
 /* BUTTON */
 .content {
     position: absolute;
-    top: 65%;   /* small adjust for better spacing */
+    top: 50%;   /* small adjust for better spacing */
     left: 50%;
     transform: translate(-50%, -50%);
 }
