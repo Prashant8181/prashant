@@ -133,7 +133,7 @@ marquee{
 
     /* ✅ LOGO */
     .logo img {
-        height: 60px;
+        height: 70px;
         margin-left: 0;
         transform: translateY(-5px);
     }
@@ -144,9 +144,9 @@ marquee{
     }
 
     .navbar ul {
-        gap: 13px;
+        gap: 11px;
         top: -15;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     /* ✅ MARQUEE (relative to image height now) */
@@ -166,13 +166,13 @@ marquee{
     /* ✅ BUTTON */
     .content {
         position: absolute;
-        top: 45%;   /* adjust slightly */
+        top: 50%;   /* adjust slightly */
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .btn {
-        padding: 6px 12px;
-        font-size: 14px;
+        padding: 3px 6px;
+        font-size: 10px;
     }
 }
