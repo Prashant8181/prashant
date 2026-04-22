@@ -117,44 +117,42 @@ marquee{
     cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
 
-    /* 🔹 HERO FULL SCREEN */
+    /* ❌ REMOVE fixed height */
     .hero {
-        height: 100vh;
         position: relative;
     }
 
-    /* 🔹 IMAGE (NO ZOOM, FULL FIT) */
+    /* ✅ IMAGE PERFECT FIT */
     .bg-img {
         width: 100%;
         height: auto;
-        display: block;   
+        display: block;
     }
 
-    /* 🔹 LOGO (SMALLER, CLEAN) */
+    /* ✅ LOGO */
     .logo img {
         height: 60px;
         margin-left: 0;
         transform: translateY(-5px);
     }
 
-    /* 🔹 NAVBAR ALIGNMENT */
+    /* ✅ NAVBAR */
     .navbar {
         padding: 10px 15px;
     }
 
     .navbar ul {
         gap: 15px;
-        top: 0;              /* remove -25px shift */
+        top: 0;
         font-size: 14px;
     }
 
-    /* 🔹 MARQUEE (CENTER LIKE DESKTOP) */
+    /* ✅ MARQUEE (relative to image height now) */
     .marquee-box {
         position: absolute;
-        top: 50%;
+        top: 55%;   /* adjust slightly */
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -165,10 +163,10 @@ marquee{
         font-size: 18px;
     }
 
-    /* 🔹 BUTTON (JUST BELOW CENTER) */
+    /* ✅ BUTTON */
     .content {
         position: absolute;
-        top: 62%;
+        top: 70%;   /* adjust slightly */
         left: 50%;
         transform: translate(-50%, -50%);
     }
