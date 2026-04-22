@@ -145,14 +145,14 @@ marquee{
 
     .navbar ul {
         gap: 11px;
-        top: -15;
-        font-size: 11px;
+        top: -13;
+        font-size: 10px;
     }
 
     /* ✅ MARQUEE (relative to image height now) */
     .marquee-box {
         position: absolute;
-        top: 40%;   /* adjust slightly */
+        top: 50%;   /* adjust slightly */
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
