@@ -107,7 +107,7 @@ marquee {
 /* BUTTON */
 .content {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -170,7 +170,7 @@ marquee {
 
     /* BUTTON FIX */
     .content {
-        top: 65vh;
+        top: 75vh;
     }
 
     .btn {
