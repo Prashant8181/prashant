@@ -145,7 +145,7 @@ marquee{
 
     .navbar ul {
         gap: 13px;
-        top: -25;
+        top: -15;
         font-size: 12px;
     }
 
@@ -166,7 +166,7 @@ marquee{
     /* ✅ BUTTON */
     .content {
         position: absolute;
-        top: 65%;   /* adjust slightly */
+        top: 45%;   /* adjust slightly */
         left: 50%;
         transform: translate(-50%, -50%);
     }
