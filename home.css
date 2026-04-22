@@ -10,44 +10,40 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-/* HERO (IMPORTANT FIX) */
-.hero {
-    width: 100%;
-    position: relative;
-}
-
-/* MARQUEE */
-.marquee-box {
+.marquee-box{
     position: absolute;
-    top: 45%;
-    width: 100%;
+    top:50%;
+    width:100%;
     transform: translateY(-50%);
-    text-align: center;
 }
 
-marquee {
+marquee{
     font-size: 30px;
     font-weight: bold;
     color: yellow;
 }
-
 /* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 15px 80px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+  /*  background: url('navbar.png');  🔥 add this */
     background-size: cover;
+
     z-index: 1000;
 }
 
 /* LOGO */
 .logo img {
     height: 150px;
-    margin-left: -30px;
+    margin-left: -40px;
+    transform: translateY(-20px); /* move upward */
 }
 
 .logo {
@@ -57,14 +53,14 @@ marquee {
 .logo.hide {
     opacity: 0;
 }
-
 /* NAV LINKS */
 .navbar ul {
     display: flex;
     gap: 40px;
     list-style: none;
+
     position: relative;
-    top: -15px; /* small fix */
+    top: -25px;
 }
 
 .navbar a {
@@ -79,9 +75,11 @@ marquee {
     position: absolute;
     left: 0;
     bottom: -5px;
+
     width: 0%;
     height: 2px;
     background: #5f7742;
+
     transition: 0.3s;
 }
 
@@ -89,22 +87,19 @@ marquee {
     width: 100%;
 }
 
-/* HAMBURGER */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* IMAGE */
-.bg-img {
+/* HERO */
+.hero {
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+}
+/* IMAGE (MAIN FIX) */
+.bg-img {
+    width: 100%;      /* FULL WIDTH */
+    height: auto;     /* KEEP ORIGINAL RATIO */
+
     display: block;
 }
 
-/* BUTTON */
+/* BUTTON CENTER */
 .content {
     position: absolute;
     top: 75%;
@@ -112,6 +107,7 @@ marquee {
     transform: translate(-50%, -50%);
 }
 
+/* BUTTON */
 .btn {
     padding: 14px 34px;
     background: #5f7742;
@@ -119,62 +115,4 @@ marquee {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-}
-
-/* ================= MOBILE FIX ================= */
-@media (max-width: 768px) {
-
-    /* NAVBAR */
-    .navbar {
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        height: 70px;
-        margin-left: 0;
-    }
-
-    /* SHOW HAMBURGER */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* MENU STYLE */
-    .navbar ul {
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        background: white;
-        width: 180px;
-
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-
-        display: none;
-        top: 80px;
-    }
-
-    .navbar ul.active {
-        display: flex;
-    }
-
-    /* MARQUEE FIX */
-    .marquee-box {
-        top: 35vh;
-    }
-
-    marquee {
-        font-size: 18px;
-    }
-
-    /* BUTTON FIX */
-    .content {
-        top: 75vh;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
 }
