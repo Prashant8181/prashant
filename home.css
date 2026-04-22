@@ -116,3 +116,63 @@ marquee{
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+
+    /* KEEP DESKTOP SAME — ONLY OVERRIDE */
+
+    .hero {
+        height: 100vh;
+        position: relative;
+    }
+
+    .bg-img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* ✅ LOGO (top-left same as desktop) */
+    .logo img {
+        height: 60px;
+        margin-left: 0;
+    }
+
+    /* ✅ NAV (top-right same alignment) */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        top: 0;          /* remove that -25px mess */
+        font-size: 14px;
+    }
+
+    /* ✅ MARQUEE (CENTER like desktop) */
+    .marquee-box {
+        position: absolute;
+        top: 50%;        /* center */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    marquee {
+        font-size: 18px;
+    }
+
+    /* ✅ BUTTON (JUST BELOW CENTER like desktop) */
+    .content {
+        position: absolute;
+        top: 65%;        /* below marquee */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
