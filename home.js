@@ -7,3 +7,10 @@ window.addEventListener("scroll", function () {
         logo.classList.remove("hide");
     }
 });
+
+let toggle = document.querySelector(".menu-toggle");
+let menu = document.querySelector(".navbar ul");
+
+toggle.addEventListener("click", function () {
+    menu.classList.toggle("active");
+});
