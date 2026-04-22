@@ -90,12 +90,15 @@ marquee{
 /* HERO */
 .hero {
     width: 100%;
+    height: 100vh;        /* 🔥 FULL SCREEN HEIGHT */
+    position: relative;
+    overflow: hidden;     /* 🔥 prevent scroll overflow */
 }
 /* IMAGE (MAIN FIX) */
 .bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
-
+    width: 100%;
+    height: 100vh;        /* 🔥 force full screen */
+    object-fit: cover;    /* 🔥 fill like mobile app */
     display: block;
 }
 
