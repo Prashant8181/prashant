@@ -255,64 +255,51 @@ hr {
     background: #cc0000;
 }
 /* 📱 MOBILE ONLY */
+/* 📱 MOBILE ONLY */
 @media (max-width: 768px) {
 
-    /* HEADER CLEAN STRUCTURE */
+    /* HEADER */
     .header {
-        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 10px;
     }
 
-    /* 🔥 LOGO + TITLE SAME LINE */
-    .logo {
-        margin-bottom: 5px;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-
     .title {
-        position: static;   /* ❌ REMOVE absolute */
+        position: static;   /* 🔥 VERY IMPORTANT */
+        transform: none;
         padding: 0;
-        margin-top: 5px;
     }
 
     .title h1 {
         font-size: 16px;
-        margin: 5px 0;
     }
 
     .title p {
         font-size: 10px;
-        margin-bottom: 5px;
     }
 
-    /* 🔥 MARQUEE LINE */
     marquee {
-        font-size: 11px;
-        margin-top: 5px;
+        font-size: 10px;
     }
 
-    /* 🔥 NAV BELOW */
+    /* NAV */
     .nav {
-        display: flex;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
         margin-top: 10px;
     }
 
     .nav a {
+        margin: 5px 8px;
         font-size: 12px;
-        margin: 5px 10px;
     }
 
-    /* 🔥 MAIN CONTENT DOWN (VERY IMPORTANT) */
+    /* 🔥 IMPORTANT FIX (YOU MISSED THIS) */
     .container {
-        margin-top: 20px;   /* reduce big gap */
+        margin-top: 180px;  /* header height adjust */
         padding: 10px;
     }
 
@@ -334,9 +321,17 @@ hr {
         font-size: 14px;
     }
 
-    /* NOTICE */
+    /* NOTICE STACK */
     .notice-container {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    /* TABLE FIX (future safe) */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 }
