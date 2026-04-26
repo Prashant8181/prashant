@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bike Service Bill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="receipt.css">
+    <link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+
+<body>
+
+<div class="bill">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <!-- LOGO (separate block) -->
+        <div class="logo">
+            <img src="Moryalogo2.jpeg">
+        </div>
+
+        <!-- TITLE -->
+        <div class="title">
+            <h1>Morya Auto Bike Service Point</h1>
+            <div class="tagline">
+                Repairing, servicing, washing & All types of parts fitting
+            </div>
+            <p>Opp. Laxmi Mata Temple, Balewadi, Pune-411045</p>
+            <p>Mob: Pradip - 7776015012</p>
+        </div>
+
+    </div>
+
+    <!-- DETAILS -->
+   <div class="details">
+    <div class="row">
+        <div class="field"><B>Name: </B> <span id="r_name"></span></div>
+        <div class="field"><B>Vehicle No: </B> <span id="r_vehicle"></span></div>
+        <div class="field"><B>Mob: </B> <span id="r_mobile"></span></div>
+    </div>
+
+    <div class="row">
+        <div class="field"><B>Brand: </B> <span id="r_brand"></span></div>
+        <div class="field"><B>Model: </B> <span id="r_model"></span></div>
+        <div class="field"><B>Running KM: </B><span id="r_running"></span></div>
+        <div class="field"><B>Next Due KM: </B> <span id="r_next"></span></div>
+    </div>
+
+    <div class="row">
+        <div class="field"><B>Date: </B> <span id="r_date"></span></div>
+        <div class="field"><B>Bill No: </B><span id="r_bill"></span></div>
+    </div>
+</div>
+
+    <!-- TABLE -->
+    <table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Particulars</th>
+             <th>Rate</th>
+            <th>Qty</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+
+    <tbody id="receiptTableBody"></tbody>
+</table>
+    <!-- TOTAL -->
+    <div class="total-box">
+    <div><span>Total</span><span id="r_total"></span></div>
+    <div><span>Adv</span><span id="r_advance"></span></div>
+    <div><span>Bal</span><span id="r_balance"></span></div>
+</div>
+
+    <!-- NEXT SERVICE -->
+    <div class="next">
+    Next Servicing Date: <span id="r_nextservice"></span>
+</div>
+
+    <!-- TERMS + STAMP -->
+    <div class="bottom">
+
+        <div class="terms">
+            <b>Terms & Conditions:</b>
+            <ol>
+                <li>Goods once sold will not be taken back</li>
+                <li>All replacement are subject to our inspection</li>
+                <li>100% Payment should be received before delivery</li>
+                <li>Free Pick & Drop Within 5KM
+            </ol>
+        </div>
+
+        <div class="stamp">
+            <img src="Stamp.jpeg">
+        </div>
+
+    </div>
+<br>
+<center>
+    <p style="font-size: 14px; color: #555;">
+        This is a system-generated document. No signature is required.
+    </p>
+</center>
+</div>
+<div class="container">   
+
+<div class="bill">
+    ...
+</div>
+
+</div>
+<!-- For previous button  -->
+<div class="back-btn-container">
+    <a href="home.html" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Home Page
+    </a>
+</div>
+
+<script src="receipt.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    padding-top:100px;
+}
+
+h1 {
+    text-align: center;
+    color: #0b3d5c;
+}
+
+
+.logo img {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    text-align: center;
+    flex: 1;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding-right: 90px;
+}
+
+.title p {
+    margin-top: 5px;
+    font-size: 13px;
+    color: gray;
+    padding-right:90px;
+}
+
+/*For herader freeze*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+
+    position: fixed;   /* 🔥 freeze */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* stay above */
+}
+
+/* .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+} */
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/*Nav style */
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 25px;
+}
+
+
+/* Align nov properly */
+.nav {
+    display: flex;
+    margin-left: auto;
+    padding-right: 60px;   /* match fetch.css */
+}
+
+ /* hover effect on links */
+.nav a:hover {
+    color: #1e3c72;
+    transition: 0.3s;
+}
+/* ===== HR LINE ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 5px 40px;
+}
+
+
+/* ===== SUMMARY CARDS ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* ✅ SAME AS fetch.css behavior */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1 1 220px;     /* ✅ responsive like fetch.css */
+    max-width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue { background: #dcecff; }
+.green { background: #d8f5e3; }
+.orange { background: #ffe7d6; }
+.purple { background: #e4ddff; }
+
+/* ===== BUTTONS ===== */
+.buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.buttons button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 25px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== NOTICE SECTION ===== */
+.notice-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+/* LEFT SIDE */
+.notice-display {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-display h3 {
+    margin-top: 0;
+}
+
+.notice-display ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* FIXED ALIGNMENT */
+.notice-display li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* RIGHT SIDE INPUT */
+.notice-input {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-input textarea {
+    width: 100%;
+    height: 80px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.save {
+    background: #1e3c72;
+    color: white;
+}
+
+.clear {
+    background: #d9534f;
+    color: white;
+}
+
+.btn-group button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== DELETE BUTTON FIX ===== */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}

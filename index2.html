@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Morya Auto Bike Service</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+
+        <div class="logo">
+            <img src="Moryalogo.jpeg">
+        </div>
+
+        <div class="title">
+            <h1>MORYA AUTO SERVICE POINT</h1>
+            <p>Expert Two-Wheeler Maintenance & Repairs</p>
+        </div>
+
+        <!-- 🔥 Navigation -->
+        <nav class="nav">
+            <a href="home.html"><i class="fa fa-home"></i> Home</a>
+            <a href="index2.html"><i class="fa fa-file-invoice"></i> Generate Bill</a>
+            <a href="Fetchdetails/fetch.html"><i class="fa fa-search"></i> Fetch Details</a>
+        </nav>
+    </header>
+
+    <!-- ✅ MAIN CONTENT START -->
+    <div class="main-content">
+
+        <hr>
+
+        <!-- Customer Details -->
+        <div class="section">
+            <h3>Customer Details</h3>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="mob" placeholder="Mobile Number" maxlength="10" oninput="validateMobile(this)">
+        </div>
+
+        <!-- Vehicle Details -->
+        <div class="section">
+            <h3>Vehicle Details</h3>
+
+            <input type="text" id="vehicle" placeholder="Vehicle No" class="box">
+            <input type="number" id="runningkm" placeholder="Running KM" class="box">
+            <input type="number" id="nextkm" placeholder="Next Due KM" class="box">
+            <br><br>
+
+            <div class="box">
+                <select id="brand" onchange="loadModels()">
+                    <option value="">Select Brand</option>
+                    <option value="Honda">Honda</option>
+                    <option value="TVS">TVS</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Bajaj">Bajaj</option>
+                    <option value="Hero">Hero</option>
+                    <option value="Yamaha">Yamaha</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <select id="model">
+                    <option value="">Select Model</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Bill Info -->
+        <div class="section">
+            <h3>Bill Info</h3>
+            <input type="text" id="billNo" readonly placeholder="Bill No (Auto)">
+
+            <label> Bill generate Date</label>
+            <input type="date" id="date">
+
+            <label>Next Servicing Date:</label>
+            <input type="date" id="nextservicedate" placeholder="Next Due Date">
+        </div>
+
+        <!-- Table -->
+        <div class="section">
+            <h3>Service Details</h3>
+
+            <table id="itemstable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Particular</th>
+                        <th>Rate</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+
+            <button onclick="addRow()">+ Add Item</button>
+        </div>
+
+        <!-- Payment -->
+        <div class="section">
+            <h3>Payment</h3>
+            <input type="text" id="total" placeholder="Total" readonly>
+            <input type="number" id="advance" placeholder="Advance" oninput="calculateBalance()">
+            <input type="text" id="balance" placeholder="Balance" readonly>
+        </div>
+
+        <!-- Buttons -->
+        <center>
+            <button class="action-btn" onclick="printBill()">🖨️ Print Bill</button>
+            <button class="action-btn" onclick="saveData()">💾 Save</button>
+        </center>
+
+    </div>
+    <!-- ✅ MAIN CONTENT END -->
+
+    <script src="script.js"></script>
+</body>
+</html>

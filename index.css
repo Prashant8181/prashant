@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* 🔥 TOP SECTION */
+.top-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #2C1F1A, #5A3E2B, #FF8C42);
+    color: #F5E6D3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CENTER CONTENT */
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* TEXT */
+.top-text {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c9b6a4;
+    margin-bottom: 60px;
+}
+
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.line {
+    font-size: 16px;
+    color: #d6bfa9;
+    margin-bottom: 30px;
+}
+
+.coming {
+    font-size: 14px;
+    color: #a68a75;
+    letter-spacing: 2px;
+}
+
+/* BUTTON */
+.project-btn {
+    margin-bottom: 30px;
+    padding: 12px 28px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    color: #F5E6D3;
+    background: transparent;
+
+    border: 1px solid #F5E6D3;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #F5E6D3;
+    color: #2C1F1A;
+}
+
+/* 🌊 CURVE (IMPORTANT FIX) */
+.curve {
+    height: 150px;
+    background: #f4f6f9;
+
+    border-top-left-radius: 100% 120px;
+    border-top-right-radius: 100% 120px;
+
+    margin-top: -80px; /* 🔥 overlap */
+}
+
+/* ⚪ PROJECT SECTION */
+.projects-section {
+    background: #f4f6f9;
+    padding: 15px 5px;
+    text-align: center;
+}
+
+/* TITLE */
+.projects-section h2 {
+    margin-top: -40px;   /* move more up */
+    margin-bottom: 25px;
+
+    color: #222;
+    font-size: 32px;     /* bigger */
+    font-weight: 700;    /* bold */
+    letter-spacing: 1px; /* stylish spacing */
+}
+
+/* .projects-section h2 {
+    margin-bottom: 20px;
+    margin-top: 0;  /* 🔥 remove extra gap 
+    font-size: 28px;
+} */
+
+/* CARDS */
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    width: 260px;
+
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.project-card button {
+    margin-top: 12px;
+    padding: 10px 18px;
+
+    background: #1e3c72;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+    .quote {
+        font-size: 22px;
+    }
+}
