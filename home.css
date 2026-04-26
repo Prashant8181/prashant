@@ -259,26 +259,32 @@ hr {
 @media (max-width: 768px) {
 
     /* HEADER */
-    .header {
+        .header {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center;   /* 🔥 center everything horizontally */
+        justify-content: center;
         text-align: center;
         padding: 10px;
     }
 
-    .title {
-        position: static;   /* 🔥 VERY IMPORTANT */
+
+.title {
+        position: static;
         transform: none;
-        justify-content: center;
-        padding: 0;
+        width: 100%;           /* 🔥 force full width */
+        text-align: center;
     }
 
-    .title h1 {
+
+.title h1 {
         font-size: 16px;
+        text-align: center;
     }
 
-    .title p {
+.title p {
         font-size: 10px;
+        text-align: center;
     }
 
     marquee {
@@ -286,15 +292,17 @@ hr {
     }
 
     /* NAV */
-    .nav {
+.nav {
+        display: flex;
+        justify-content: center;  /* 🔥 center links */
+        align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
+        width: 100%;              /* 🔥 important */
         margin-top: 10px;
     }
 
     .nav a {
-        margin: 5px 8px;
+        margin: 5px 10px;
         font-size: 12px;
     }
 
