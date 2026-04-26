@@ -254,11 +254,10 @@ hr {
 .delete-btn:hover {
     background: #cc0000;
 }
-
-/* 📱 MOBILE RESPONSIVE */
+/* 📱 MOBILE ONLY */
 @media (max-width: 768px) {
 
-    /* HEADER FIX */
+    /* HEADER */
     .header {
         flex-direction: column;
         align-items: center;
@@ -266,41 +265,41 @@ hr {
         padding: 10px;
     }
 
-     .title h1 {
-        font-size: 12px;  
-    }
-    .title p {
-        font-size: 6px;
-    }
-    
     .title {
-        position: static;
+        position: static;   /* 🔥 VERY IMPORTANT */
         transform: none;
         padding: 0;
+    }
+
+    .title h1 {
+        font-size: 16px;
+    }
+
+    .title p {
         font-size: 10px;
     }
 
+    marquee {
+        font-size: 10px;
+    }
+
+    /* NAV */
     .nav {
-        margin: 10px 0 0 0;
-        padding: 0;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0;
+        margin-top: 10px;
     }
 
     .nav a {
-        margin: 5px 10px;
+        margin: 5px 8px;
+        font-size: 12px;
     }
 
-    /* MAIN CONTENT */
-    .main-content {
-        margin-top: 160px;
+    /* 🔥 IMPORTANT FIX (YOU MISSED THIS) */
+    .container {
+        margin-top: 180px;  /* header height adjust */
         padding: 10px;
-    }
-
-    /* INPUT FIX */
-    input {
-        width: 100%;
-        max-width: 100%;
     }
 
     /* CARDS STACK */
@@ -311,25 +310,27 @@ hr {
 
     .card {
         width: 100%;
-        max-width: 90%;
+        max-width: 95%;
     }
 
-    /* NOTICE SECTION STACK */
+    /* BUTTONS */
+    .buttons button {
+        width: 95%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* NOTICE STACK */
     .notice-container {
         flex-direction: column;
         padding: 10px;
     }
 
-    /* BUTTON FIX */
-    .buttons button {
-        width: 90%;
-        padding: 12px;
-    }
-
-    /* TABLE SCROLL */
+    /* TABLE FIX (future safe) */
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
+}
 }
