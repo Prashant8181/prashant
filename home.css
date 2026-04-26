@@ -254,3 +254,74 @@ hr {
 .delete-btn:hover {
     background: #cc0000;
 }
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* HEADER FIX */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .title {
+        position: static;
+        transform: none;
+        padding: 0;
+    }
+
+    .nav {
+        margin: 10px 0 0 0;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 5px 10px;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+        margin-top: 140px;
+        padding: 10px;
+    }
+
+    /* INPUT FIX */
+    input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* CARDS STACK */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    /* NOTICE SECTION STACK */
+    .notice-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* BUTTON FIX */
+    .buttons button {
+        width: 90%;
+        padding: 12px;
+    }
+
+    /* TABLE SCROLL */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
