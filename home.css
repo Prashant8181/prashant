@@ -255,51 +255,55 @@ hr {
     background: #cc0000;
 }
 /* 📱 MOBILE ONLY */
-/* 📱 MOBILE ONLY */
 @media (max-width: 768px) {
-
-    /* HEADER */
-        .header-top {
+    .header {
         display: flex;
         flex-direction: column;
-        align-items: center;   /* 🔥 center everything horizontally */
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 🔥 FIX MAIN LINE */
+    .logo-title {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        text-align: center;
-        padding: 10px;
+        gap: 10px;
     }
 
+    .logo img {
+        width: 50px;   /* 🔥 VERY IMPORTANT */
+        height: auto;
+    }
 
-.title {
+    .title {
         position: static;
-        transform: none;
-        width: 100%;           /* 🔥 force full width */
-        text-align: center;
     }
 
-
-.title h1 {
-        font-size: 16px;
-        text-align: center;
+    .title h1 {
+        font-size: 14px;
+        margin: 0;
     }
 
-.title p {
+    .title p {
         font-size: 10px;
-        text-align: center;
+        margin: 0;
     }
 
+    /* LINE 2 */
     marquee {
         font-size: 10px;
+        margin-top: 5px;
     }
 
-    /* NAV */
-.nav {
+    /* LINE 3 */
+    .nav {
         display: flex;
-        justify-content: center;  /* 🔥 center links */
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;              /* 🔥 important */
+        justify-content: center;
+        gap: 15px;
         margin-top: 10px;
     }
+}
 
     .nav a {
         margin: 5px 10px;
