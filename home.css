@@ -269,6 +269,7 @@ hr {
     .title {
         position: static;   /* 🔥 VERY IMPORTANT */
         transform: none;
+        justify-content: center;
         padding: 0;
     }
 
