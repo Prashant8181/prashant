@@ -265,6 +265,7 @@ hr {
     .header-top {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
     }
 
@@ -272,11 +273,11 @@ hr {
         width: 45px;
     }
 
-    .title {
-        flex: 1;
-        min-width: 0;
-        text-align: left;
-    }
+.title {
+    flex: 1;
+    min-width: 0;
+    text-align: center;   /* 🔥 THIS FIXES YOUR ISSUE */
+}
 
     .title h1 {
         font-size: 13px;
