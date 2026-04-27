@@ -262,22 +262,19 @@ hr {
         padding: 10px;
     }
 
-    /* 🔥 LOGO + TITLE SAME ROW */
     .header-top {
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    /* 🔥 LOGO */
     .logo img {
-        width: 45px;   /* fixed */
+        width: 45px;
     }
 
-    /* 🔥 TITLE FIX */
     .title {
         flex: 1;
-        min-width: 0;   /* 🔥 IMPORTANT */
+        min-width: 0;
         text-align: left;
     }
 
@@ -292,14 +289,12 @@ hr {
         margin: 0;
     }
 
-    /* 🔥 MARQUEE */
     marquee {
         text-align: center;
         font-size: 10px;
         margin-top: 5px;
     }
 
-    /* 🔥 NAV CENTER */
     .nav {
         display: flex;
         justify-content: center;
@@ -312,9 +307,8 @@ hr {
         font-size: 12px;
     }
 
-    /* 🔥 CONTENT DOWN (CARD FIX) */
     .container {
         margin-top: 120px;
-        padding: 10px;
     }
+}
 }
