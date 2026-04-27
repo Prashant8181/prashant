@@ -265,24 +265,23 @@ hr {
     }
 
     /* 🔥 TOP LINE (LOGO + TITLE) */
-    .header-top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-    }
+  .header-top {
+    display: flex !important;
+    flex-direction: row;   /* 🔥 force horizontal */
+    align-items: center;
+    justify-content: flex-start;  /* 🔥 move LEFT */
+    gap: 10px;
+    width: 100%;
+}
 
     .logo img {
-        width: 70px;
-        height: auto;
-        position: relative;
-        margin-left:-10px;
-    }
+    width: 40px;
+    display: block;
+}
 
-    .title {
-        text-align: center;
-    }
+   .title {
+    text-align: left;
+}
 
     .title h1 {
         font-size: 14px;
