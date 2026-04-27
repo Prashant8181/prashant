@@ -259,54 +259,51 @@ hr {
     .header {
         display: flex;
         flex-direction: column;
-        /* align-items:center; */
-        align-items: stretch; /* 🔥 important */
         padding: 10px;
     }
 
     /* 🔥 LOGO + TITLE SAME ROW */
     .header-top {
-        display: flex ! important;
+        display: flex;
         align-items: center;
-        justify-content: flex-start; /* LEFT align */
-        gap: 10px; /* space between logo & title */
+        gap: 10px;
     }
 
+    /* 🔥 LOGO */
     .logo img {
-        width: 60px;
-        height: auto;
+        width: 45px;   /* fixed */
     }
 
+    /* 🔥 TITLE FIX */
     .title {
-    text-align: left;   /* align properly with logo */
-    flex: 1;            /* 🔥 VERY IMPORTANT → take full width */
-}
+        flex: 1;
+        min-width: 0;   /* 🔥 IMPORTANT */
+        text-align: left;
+    }
 
     .title h1 {
-    font-size: 14px;
-    line-height: 1.2;
-    word-break: keep-all;   /* prevents awkward breaking */
-}
+        font-size: 13px;
+        line-height: 1.2;
+        margin: 0;
+    }
 
     .title p {
         font-size: 10px;
         margin: 0;
     }
 
-    /* 🔥 MARQUEE CENTER */
+    /* 🔥 MARQUEE */
     marquee {
         text-align: center;
-        text:align: center;
         font-size: 10px;
         margin-top: 5px;
-        display: block;
     }
 
-    /* 🔥 NAV CENTER NEXT LINE */
+    /* 🔥 NAV CENTER */
     .nav {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
         margin-top: 10px;
         flex-wrap: wrap;
     }
@@ -315,10 +312,9 @@ hr {
         font-size: 12px;
     }
 
-    /* 🔥 VERY IMPORTANT (CARD FIX) */
+    /* 🔥 CONTENT DOWN (CARD FIX) */
     .container {
-        margin-top: 120px;  /* reduce or adjust */
+        margin-top: 120px;
         padding: 10px;
     }
-}
 }
