@@ -256,6 +256,7 @@ hr {
 }
 /* 📱 MOBILE ONLY */
 @media (max-width: 768px) {
+
     .header {
         display: flex;
         flex-direction: column;
@@ -263,21 +264,22 @@ hr {
         text-align: center;
     }
 
-    /* 🔥 FIX MAIN LINE */
-    .logo-title {
+    /* 🔥 TOP LINE (LOGO + TITLE) */
+    .header-top {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
+        width: 100%;
     }
 
     .logo img {
-        width: 50px;   /* 🔥 VERY IMPORTANT */
+        width: 50px;
         height: auto;
     }
 
     .title {
-        position: static;
+        text-align: center;
     }
 
     .title h1 {
@@ -290,61 +292,28 @@ hr {
         margin: 0;
     }
 
-    /* LINE 2 */
+    /* 🔥 MARQUEE CENTER */
     marquee {
+        display: block;
+        width: 100%;
+        text-align: center;
         font-size: 10px;
         margin-top: 5px;
     }
 
-    /* LINE 3 */
+    /* 🔥 NAV CENTER */
     .nav {
         display: flex;
         justify-content: center;
         gap: 15px;
         margin-top: 10px;
+        width: 100%;
     }
-}
 
     .nav a {
-        margin: 5px 10px;
         font-size: 12px;
+        margin: 0;
     }
 
-    /* 🔥 IMPORTANT FIX (YOU MISSED THIS) */
-    .container {
-        margin-top: 180px;  /* header height adjust */
-        padding: 10px;
-    }
-
-    /* CARDS STACK */
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 95%;
-    }
-
-    /* BUTTONS */
-    .buttons button {
-        width: 95%;
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    /* NOTICE STACK */
-    .notice-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    /* TABLE FIX (future safe) */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
 }
 }
