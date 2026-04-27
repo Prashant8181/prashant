@@ -274,8 +274,10 @@ hr {
     }
 
     .logo img {
-        width: 50px;
+        width: 70px;
         height: auto;
+        position: relative;
+        margin-left:-10px;
     }
 
     .title {
@@ -312,7 +314,8 @@ hr {
 
     .nav a {
         font-size: 12px;
-        margin: 0;
+        position: relative; 
+        left:-10;
     }
 
 }
