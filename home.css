@@ -266,11 +266,10 @@ hr {
 
     /* 🔥 LOGO + TITLE SAME ROW */
     .header-top {
-        display: flex;
+        display: flex ! important;
         align-items: center;
         justify-content: flex-start; /* LEFT align */
         gap: 10px; /* space between logo & title */
-        width: 100%;
     }
 
     .logo img {
@@ -279,13 +278,15 @@ hr {
     }
 
     .title {
-        text-align: center; /* 🔥 important */
-    }
+    text-align: left;   /* align properly with logo */
+    flex: 1;            /* 🔥 VERY IMPORTANT → take full width */
+}
 
     .title h1 {
-        font-size: 14px;
-        margin: 0;
-    }
+    font-size: 14px;
+    line-height: 1.2;
+    word-break: keep-all;   /* prevents awkward breaking */
+}
 
     .title p {
         font-size: 10px;
