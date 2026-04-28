@@ -192,29 +192,40 @@ center {
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== FULL MOBILE PAGE PERFECT STRUCTURE ===== */
 @media (max-width: 768px) {
 
+    /* ===== BODY ===== */
     body {
-        padding-top: 210px;
+        padding-top: 210px;   /* fixed header space */
+        margin: 0;
+        overflow-x: hidden;
     }
 
+    /* ===== HEADER ===== */
     .header {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    /* LOGO + TITLE */
+    /* ===== TOP SECTION ===== */
     .header-top {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 2px;
+        gap: 2px;   /* logo + title close */
+        width: 100%;
     }
 
+    /* ===== LOGO ===== */
     .logo img {
         width: 50px;
+        height: auto;
     }
 
-    /* TITLE */
+    /* ===== TITLE ===== */
     .title {
         text-align: left;
         flex: 1;
@@ -240,22 +251,31 @@ center {
         left: -6px;
     }
 
+    /* ===== MARQUEE ===== */
     marquee {
         font-size: 11px;
         margin-top: 6px;
         text-align: center;
+        width: 100%;
     }
 
-    /* 🔥 MOBILE NAVBAR CLEAN FIX */
+    /* ===== NAVBAR ===== */
     .nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 8px;      /* 🔥 navbar original place */
+        margin-top: 8px;
         flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;   /* if more links */
+        scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
     }
 
     .nav a {
@@ -263,8 +283,89 @@ center {
         margin: 0;
         padding: 0;
         position: relative;
-        top: 2px;           /* 🔥 only links slightly lower */
+        top: 2px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
-   
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 12px;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .section h3 {
+        font-size: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* ===== INPUT ===== */
+    input {
+        width: 100%;
+        max-width: 100%;
+        margin: 6px 0;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* ===== SELECT BOX ===== */
+    .box {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .box select {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    /* ===== TABLE ===== */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* ===== BUTTONS ===== */
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .action-btn {
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* ===== CENTER ===== */
+    center {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* ===== EXTRA SPACING FIX ===== */
+    hr {
+        margin: 8px 0;
+    }
 }
 
