@@ -24,7 +24,6 @@ body {
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
-    border-bottom: 1px solid #eee;
 }
 
 /* ===== LOGO ===== */
@@ -50,15 +49,13 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
-    white-space: nowrap;
 }
 
 .title p {
     margin-top: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
     font-size: 13px;
     color: gray;
-    white-space: nowrap;
 }
 
 /* ===== MARQUEE ===== */
@@ -73,9 +70,9 @@ marquee {
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    padding-right: 40px;
-    gap: 22px;
-    margin-top: 8px;
+    padding-right: 40px;   /* 🔥 balanced right spacing */
+    gap: 22px;     
+    margin-top: 8px;   
 }
 
 .nav a {
@@ -86,7 +83,6 @@ marquee {
     margin: 0;
     padding: 0;
     line-height: 1;
-    white-space: nowrap;
 }
 
 .nav a:hover {
@@ -101,7 +97,6 @@ hr {
     background: linear-gradient(to right, transparent, #ccc, transparent);
     margin: 5px 40px;
 }
-
 /* ===== MAIN CONTENT ===== */
 .main-content {
     max-width: 1200px;
