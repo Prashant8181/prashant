@@ -280,18 +280,16 @@ hr {
         flex: 1;
     }
 
-    .title h1 {
-        font-size: 18px;   /* 🔥 title ek row me */
-        white-space: nowrap;
-        letter-spacing: 1px;
-    }
-
-    .title p {
-    font-size: 11px;
-    margin-top: 3px;
-    padding-left: 8px;   
+    
+.title h1 {
+    position: relative;
+    left: -8px;   /* 🔥 title left */
 }
 
+.title p {
+    position: relative;
+    left: -8px;   /* 🔥 subtitle left */
+}
     marquee {
         font-size: 11px;
         margin-top: 6px;
