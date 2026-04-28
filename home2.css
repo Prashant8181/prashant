@@ -133,7 +133,7 @@ marquee{
         object-fit: contain;          /* full image visible */
         object-position: top center;  /* 🔥 moves image upward */
         display: block;
-        margin-top: -40px;            /* 🔥 extra upward shift */
+        margin-top: -1000px;            /* 🔥 extra upward shift */
     }
 
     /* 🔹 NAVBAR */
