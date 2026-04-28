@@ -1,66 +1,88 @@
+/* ===================================================== */
 /* RESET */
+/* ===================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===================================================== */
 /* BODY */
+/* ===================================================== */
 body {
     font-family: 'Playfair Display', serif;
+    background: #f5f3ef;
+    overflow-x: hidden;
 }
 
-.marquee-box{
+/* ===================================================== */
+/* MARQUEE */
+/* ===================================================== */
+.marquee-box {
     position: absolute;
-    top:50%;
-    width:100%;
+    top: 50%;
+    width: 100%;
     transform: translateY(-50%);
+    text-align: center;
+    z-index: 50;
 }
 
-marquee{
+marquee {
     font-size: 30px;
     font-weight: bold;
     color: yellow;
 }
+
+/* ===================================================== */
 /* NAVBAR */
+/* ===================================================== */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     padding: 15px 80px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-  /*  background: url('navbar.png');  🔥 add this */
     background-size: cover;
-
     z-index: 1000;
 }
 
+/* ===================================================== */
 /* LOGO */
-.logo img {
-    height: 150px;
-    margin-left: -40px;
-    transform: translateY(-20px); /* move upward */
-}
-
+/* ===================================================== */
 .logo {
     transition: opacity 0.4s ease;
+}
+
+.logo img {
+    height: 150px;
+    width: auto;
+    margin-left: -40px;
+    transform: translateY(-20px);
+    display: block;
+    object-fit: contain;
 }
 
 .logo.hide {
     opacity: 0;
 }
+
+/* ===================================================== */
 /* NAV LINKS */
+/* ===================================================== */
 .navbar ul {
     display: flex;
     gap: 40px;
     list-style: none;
-
     position: relative;
     top: -25px;
+}
+
+.navbar ul li {
+    list-style: none;
 }
 
 .navbar a {
@@ -68,6 +90,8 @@ marquee{
     color: #b23a3a;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .navbar a::after {
@@ -75,11 +99,9 @@ marquee{
     position: absolute;
     left: 0;
     bottom: -5px;
-
     width: 0%;
     height: 2px;
     background: #5f7742;
-
     transition: 0.3s;
 }
 
@@ -87,27 +109,36 @@ marquee{
     width: 100%;
 }
 
+/* ===================================================== */
 /* HERO */
+/* ===================================================== */
 .hero {
     width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
-/* IMAGE (MAIN FIX) */
-.bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
 
+/* ===================================================== */
+/* BACKGROUND IMAGE */
+/* ===================================================== */
+.bg-img {
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-/* BUTTON CENTER */
+/* ===================================================== */
+/* BUTTON */
+/* ===================================================== */
 .content {
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 60;
 }
 
-/* BUTTON */
 .btn {
     padding: 14px 34px;
     background: #5f7742;
@@ -115,88 +146,62 @@ marquee{
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    transition: 0.3s;
 }
-/* ===================================================== */
-/* ===== MOBILE VIEW ONLY (HOME2 / ARCHITECT SITE) ===== */
-/* ===== CLEAN • PREMIUM • FULL SCREEN • FIXED ========= */
-/* ===================================================== */
 
+.btn:hover {
+    background: #4e6535;
+    transform: translateY(-2px);
+}
+
+/* ===================================================== */
+/* MOBILE VIEW */
+/* ===================================================== */
 @media (max-width: 768px) {
 
-    /* ===== GLOBAL ===== */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
+    /* ===== BODY ===== */
     html, body {
         width: 100%;
+        min-height: 100%;
         overflow-x: hidden;
-        font-family: 'Montserrat', sans-serif;
         background: #f5f3ef;
     }
 
     body {
-        min-height: 100vh;
+        font-family: 'Montserrat', sans-serif;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* ===== HERO ===== */
     .hero {
         position: relative;
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background: #f5f3ef;
     }
 
-    /* ===== FULL IMAGE FIX ===== */
+    /* ===== IMAGE FIX (MAIN ISSUE SOLVED) ===== */
     .bg-img {
         width: 100%;
         height: 100%;
-        object-fit: contain;             /* full image visible */
-        object-position: top center;     /* image top align */
+        object-fit: contain;
+        object-position: top center;   /* 🔥 image top */
         display: block;
-        margin-top: -45px;               /* 🔥 move image slightly upward */
-        transform: scale(1.02);          /* premium slight zoom */
-    }
-
-    /* ===== MARQUEE ===== */
-    .marquee-box {
-        position: fixed;
-        top: 78px;                       /* below navbar */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 94%;
-        z-index: 999;
-        text-align: center;
-    }
-
-    marquee {
-        background: rgba(91, 110, 63, 0.92);
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        padding: 8px 14px;
-        border-radius: 30px;
-        letter-spacing: 1px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin-top: -55px;             /* 🔥 move image upward */
     }
 
     /* ===== NAVBAR ===== */
     .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 12px 14px;
+        padding: 10px 14px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
         background: transparent;
         z-index: 1000;
     }
@@ -210,76 +215,65 @@ marquee{
     .logo img {
         height: 58px;
         width: auto;
-        object-fit: contain;
-        display: block;
-        transform: translateY(-4px);
+        margin-left: 0;
+        transform: translateY(-6px);
     }
 
     /* ===== NAV LINKS ===== */
     .navbar ul {
         display: flex;
-        align-items: center;
         gap: 14px;
-        list-style: none;
-        padding: 0;
+        top: 0;
         margin: 0;
+        padding: 0;
+        align-items: center;
         flex-wrap: nowrap;
     }
 
-    .navbar ul li {
-        list-style: none;
-    }
-
     .navbar ul li a {
-        text-decoration: none;
-        color: #b6463c;
-        font-family: 'Playfair Display', serif;
         font-size: 14px;
-        font-weight: 600;
         white-space: nowrap;
-        transition: 0.3s ease;
+        color: #b23a3a;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
     }
 
-    .navbar ul li a:hover {
-        color: #8d3028;
+    /* ===== MARQUEE ===== */
+    .marquee-box {
+        position: fixed;
+        top: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        z-index: 999;
+        text-align: center;
     }
 
-    /* ===== BUTTON CONTENT ===== */
+    marquee {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        background: rgba(95, 119, 66, 0.92);
+        padding: 8px 14px;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    }
+
+    /* ===== BUTTON POSITION ===== */
     .content {
         position: absolute;
-        top: 63%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 50;
-        text-align: center;
         width: 100%;
+        text-align: center;
     }
 
     /* ===== BUTTON ===== */
     .btn {
-        background: #667d45;
-        color: white;
-        border: none;
-        padding: 12px 26px;
-        font-size: 13px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        border-radius: 14px;
-        cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-        transition: all 0.3s ease;
+        padding: 10px 22px;
+        font-size: 12px;
+        border-radius: 10px;
+        background: #5f7742;
     }
-
-    .btn:hover {
-        background: #556938;
-        transform: translateY(-2px);
-    }
-
-    /* ===== EXTRA MOBILE BALANCE ===== */
-    section {
-        margin: 0;
-        padding: 0;
-    }
-
 }
-
