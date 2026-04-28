@@ -304,28 +304,27 @@ hr {
         left: -6px;   /* 🔥 same alignment */
     }
 
-    /* MARQUEE */
-    marquee {
-        font-size: 11px;
-        margin-top: 6px;
-        text-align: center;
-    }
+    
 
     /* 🔥 NAVBAR ORIGINAL POSITION */
-    .nav {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 0;   /* 🔥 DO NOT MOVE WHOLE NAVBAR */
-        flex-wrap: nowrap;
-    }
+/* 🔥 KEEP NAVBAR SAME PLACE — ONLY FIX LINKS ALIGNMENT */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;          /* 🔥 reduce space */
+    margin-top: -8px;   /* 🔥 whole nav slightly UP */
+    flex-wrap: nowrap;
+    padding-right: 0;
+}
 
-    /* 🔥 ONLY LINKS LITTLE DOWN */
-    .nav a {
-        font-size: 14px;
-        position: relative;
-        top: 2px;   /* 🔥 slight down only */
-    }
+/* 🔥 LINKS */
+.nav a {
+    font-size: 13px;
+    position: relative;
+    top: 20px;             /* 🔥 remove down push */
+    margin: 0;
+    padding: 0;
+}
 
     .cards {
         flex-direction: column;
