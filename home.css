@@ -93,6 +93,29 @@ hr {
     margin: 5px 40px;
 }
 
+marquee {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;   /* 🔥 modern premium font */
+    font-size: 16px;                                  /* clean readable */
+    font-weight: 600;                                 /* bold but classy */
+    color: #ffffff;                                   /* white text */
+    
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* 🔥 premium blue gradient */
+    
+    padding: 12px 0;                                  /* height */
+    border-radius: 8px;                               /* smooth corners */
+    
+    letter-spacing: 0.8px;                            /* stylish spacing */
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);         /* soft shadow */
+    
+    margin-top: 10px;
+    width: 100%;
+    
+    border-top: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+
 /* ===== SUMMARY CARDS ===== */
 .cards {
     display: flex;
@@ -339,6 +362,12 @@ hr {
         font-size: 14px;
     }
 
+      marquee {
+        font-size: 13px;
+        padding: 10px 0;
+        letter-spacing: 0.5px;
+        border-radius: 6px;
+    }
     /* NOTICE */
     .notice-container {
         flex-direction: column;
