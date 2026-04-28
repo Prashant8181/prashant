@@ -308,7 +308,7 @@ hr {
         gap: 12px;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 0;      /* 🔥 navbar original place */
+        margin-top: 8px;      /* 🔥 navbar original place */
         flex-wrap: nowrap;
     }
 
