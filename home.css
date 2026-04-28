@@ -3,18 +3,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f6f9;
-    padding-top:120px;
+    padding-top: 120px;
 }
 
 /* ===== HEADER ===== */
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 15px 40px;
     background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
+/* ===== LOGO ===== */
 .logo img {
     width: 100px;
     height: 80px;
@@ -22,7 +29,11 @@ body {
     object-fit: cover;
 }
 
+/* ===== TITLE ===== */
 .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     flex: 1;
 }
@@ -33,70 +44,46 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
-     
 }
 
 .title p {
     margin-top: 5px;
+    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
     font-size: 13px;
     color: gray;
-     
 }
 
+/* ===== MARQUEE ===== */
+marquee {
+    font-size: 11px;
+    margin-top: 6px;
+}
 
-
-
-
-/*For herader freeze*/
-.header {
+/* ===== NAVBAR ===== */
+.nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 15px 40px;
-    background: white;
-
-    position: fixed;   /* 🔥 freeze */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;     /* stay above */
+    justify-content: center;
+    margin-left: auto;
+    padding-right: 40px;   /* 🔥 balanced right spacing */
+    gap: 22px;             /* 🔥 even spacing */
 }
-marquee {
-        font-size: 11px;
-        margin-top: 6px;
-    }
 
-.title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-/*Nav style */
 .nav a {
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
     color: black;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
-/* Add spacing between links */
-.nav a {
-    margin-left: 25px;
-}
-
-/* Align nov properly */
-.nav {
-    display: flex;
-    margin-left: auto;   /* 🔥 THIS pushes it to RIGHT */
-    padding-right: 80px;
-}
-
- /* hover effect on links */
 .nav a:hover {
     color: #1e3c72;
     transition: 0.3s;
 }
+
 /* ===== HR LINE ===== */
 hr {
     border: none;
@@ -189,7 +176,6 @@ hr {
     padding: 0;
 }
 
-/* FIXED ALIGNMENT */
 .notice-display li {
     display: flex;
     justify-content: space-between;
@@ -240,7 +226,7 @@ hr {
     cursor: pointer;
 }
 
-/* ===== DELETE BUTTON FIX ===== */
+/* ===== DELETE BUTTON ===== */
 .delete-btn {
     background: #ff4d4d;
     color: white;
@@ -258,10 +244,13 @@ hr {
 .delete-btn:hover {
     background: #cc0000;
 }
-/* ===== MOBILE VIEW ===== */
-/* 🔥 EXACT FIX = navbar same place, ONLY title closer to logo + slightly left */
 
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
+
+    body {
+        padding-top: 210px;
+    }
 
     .header {
         padding: 10px;
@@ -272,60 +261,66 @@ hr {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 2px;   /* 🔥 logo ke baad very small space */
+        gap: 2px;
     }
 
     .logo img {
         width: 50px;
     }
 
-    /* TITLE BLOCK */
+    /* TITLE */
     .title {
         text-align: left;
         flex: 1;
-        margin-left: 0;   /* 🔥 no extra gap */
+        margin-left: 0;
+        position: static;
+        transform: none;
     }
 
-    /* TITLE MAIN */
     .title h1 {
         font-size: 18px;
         white-space: nowrap;
         letter-spacing: 1px;
         margin: 0;
         position: relative;
-        left: -6px;   /* 🔥 slightly left */
+        left: -6px;
     }
 
-    /* SUBTITLE */
     .title p {
         font-size: 11px;
         margin-top: 3px;
+        margin-bottom: 4px;
         position: relative;
-        left: -6px;   /* 🔥 same alignment */
+        left: -6px;
     }
 
-    
+    marquee {
+        font-size: 11px;
+        margin-top: 6px;
+        text-align: center;
+    }
 
-    /* 🔥 NAVBAR ORIGINAL POSITION */
-/* 🔥 KEEP NAVBAR SAME PLACE — ONLY FIX LINKS ALIGNMENT */
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;          /* 🔥 reduce space */
-    margin-top: -8px;   /* 🔥 whole nav slightly UP */
-    flex-wrap: nowrap;
-    padding-right: 0;
-}
+    /* 🔥 MOBILE NAVBAR CLEAN FIX */
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 0;      /* 🔥 navbar original place */
+        flex-wrap: nowrap;
+    }
 
-/* 🔥 LINKS */
-.nav a {
-    font-size: 13px;
-    position: relative;
-    top: 20px;             /* 🔥 remove down push */
-    margin: 0;
-    padding: 0;
-}
+    .nav a {
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 2px;           /* 🔥 only links slightly lower */
+    }
 
+    /* CARDS */
     .cards {
         flex-direction: column;
         align-items: center;
@@ -336,12 +331,14 @@ hr {
         max-width: 95%;
     }
 
+    /* BUTTONS */
     .buttons button {
         width: 95%;
         padding: 12px;
         font-size: 14px;
     }
 
+    /* NOTICE */
     .notice-container {
         flex-direction: column;
         padding: 10px;
@@ -352,4 +349,4 @@ hr {
         overflow-x: auto;
         white-space: nowrap;
     }
-
+}
