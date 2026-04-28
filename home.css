@@ -33,27 +33,17 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
-      position: relative;
-    left: -15px;   
+     
 }
 
 .title p {
     margin-top: 5px;
     font-size: 13px;
     color: gray;
-    position: relative;
-    left: -8px;   
+     
 }
 
-/* .title h1 {
-    position: relative;
-    left: -8px;   /* 🔥 title left */
-}
 
-.title p {
-    position: relative;
-    left: -8px;   /* 🔥 subtitle left */
-} */
 
 
 
@@ -272,54 +262,72 @@ hr {
 @media (max-width: 768px) {
 
     body {
-        padding-top: 210px; /* 🔥 mobile header height */
+        padding-top: 210px;
     }
 
     .header {
         padding: 10px;
     }
 
+    /* LOGO + TITLE ROW */
     .header-top {
-        justify-content: flex-start; /* logo left */
+        display: flex;
         align-items: center;
-        gap: 10px;
+        justify-content: flex-start;
+        gap: 1px;   /* 🔥 logo ke baad only 1px space */
     }
 
     .logo img {
         width: 50px;
     }
 
+    /* TITLE BLOCK */
     .title {
         text-align: left;
         flex: 1;
+        margin-left: 1px;   /* 🔥 title logo ke bilkul pass */
     }
 
-    
-.title h1 {
-    position: relative;
-    left: -8px;   /* 🔥 title left */
-}
+    /* H1 LEFT */
+    .title h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        margin: 0;
+        position: relative;
+        left: -4px;   /* 🔥 slightly left */
+    }
 
-.title p {
-    position: relative;
-    left: -8px;   /* 🔥 subtitle left */
-}
+    /* P LEFT */
+    .title p {
+        font-size: 11px;
+        margin-top: 3px;
+        position: relative;
+        left: -4px;   /* 🔥 slightly left */
+    }
+
+    /* MARQUEE */
     marquee {
         font-size: 11px;
         margin-top: 6px;
+        text-align: center;
     }
 
+    /* NAVBAR */
     .nav {
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;   /* 🔥 navbar niche */
-    flex-wrap: nowrap;
-}
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 12px;
+        flex-wrap: nowrap;
+    }
 
-.nav a {
-    position: relative;
-    top: 8px;
-}
+    /* NAV LINKS ONLY */
+    .nav a {
+        font-size: 14px;
+        position: relative;
+        top: 6px;   /* 🔥 slightly down */
+    }
 
     .cards {
         flex-direction: column;
