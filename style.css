@@ -194,19 +194,77 @@ center {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-    .box {
-        width: 100%;
+    body {
+        padding-top: 210px;
     }
 
-    input {
-        max-width: 100%;
+    .header {
+        padding: 10px;
+    }
+
+    /* LOGO + TITLE */
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    /* TITLE */
+    .title {
+        text-align: left;
+        flex: 1;
+        margin-left: 0;
+        position: static;
+        transform: none;
     }
 
     .title h1 {
         font-size: 18px;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        margin: 0;
+        position: relative;
+        left: -6px;
+    }
+
+    .title p {
+        font-size: 11px;
+        margin-top: 3px;
+        margin-bottom: 4px;
+        position: relative;
+        left: -6px;
+    }
+
+    marquee {
+        font-size: 11px;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    /* 🔥 MOBILE NAVBAR CLEAN FIX */
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 8px;      /* 🔥 navbar original place */
+        flex-wrap: nowrap;
     }
 
     .nav a {
-        font-size: 12px;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 2px;           /* 🔥 only links slightly lower */
     }
+   
 }
+
