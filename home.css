@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f6f9;
-    padding-top: 180px; /* 🔥 header ke niche cards hide nahi honge */
+    padding-top:100px;
 }
 
 h1 {
@@ -11,44 +11,17 @@ h1 {
     color: #0b3d5c;
 }
 
-/* ===== LOGO ===== */
+
 .logo img {
-    width: 70px;
-    height: auto;
+    width: 100px;
+    height: 80px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-/* ===== HEADER ===== */
-.header {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 20px;
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-}
-
-/* ===== TOP SECTION (LOGO + TITLE) ===== */
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-}
-
-/* ===== TITLE ===== */
 .title {
+    text-align: center;
     flex: 1;
-    min-width: 0;
-    text-align: left;
-    position: static;   /* 🔥 old absolute remove */
-    transform: none;
 }
 
 .title h1 {
@@ -56,67 +29,81 @@ h1 {
     font-size: 26px;
     letter-spacing: 2px;
     font-weight: bold;
-    color: #0b3d5c;
-
-    /* 🔥 MAIN FIX */
-    white-space: nowrap;   /* ek row me */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0;
+    padding-right: 90px;
 }
 
 .title p {
     margin-top: 5px;
     font-size: 13px;
     color: gray;
-    padding: 0;
+    padding-right:90px;
 }
 
-/* ===== MARQUEE ===== */
-marquee {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 8px;
-    color: red;
-}
-
-/* ===== NAV ===== */
-.nav {
+/*For herader freeze*/
+.header {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 12px;
-    flex-wrap: wrap;
-    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+
+    position: fixed;   /* 🔥 freeze */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;     /* stay above */
 }
 
+/* .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+} */
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/*Nav style */
 .nav a {
+    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
     color: black;
-    font-size: 16px;
+    margin-left: 25px;
 }
 
+
+/* Align nov properly */
+.nav {
+    display: flex;
+    margin-left: auto;
+    padding-right: 60px;   /* match fetch.css */
+}
+
+ /* hover effect on links */
 .nav a:hover {
     color: #1e3c72;
     transition: 0.3s;
 }
-
-/* ===== HR ===== */
+/* ===== HR LINE ===== */
 hr {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 5px 0;
+    margin: 5px 40px;
 }
+
 
 /* ===== SUMMARY CARDS ===== */
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;   /* ✅ SAME AS fetch.css behavior */
     gap: 20px;
     padding: 20px;
 }
@@ -124,7 +111,7 @@ hr {
 .card {
     background: white;
     padding: 20px;
-    flex: 1 1 220px;
+    flex: 1 1 220px;     /* ✅ responsive like fetch.css */
     max-width: 250px;
     border-radius: 15px;
     text-align: center;
@@ -173,27 +160,47 @@ hr {
     transform: scale(1.05);
 }
 
-/* ===== NOTICE ===== */
+/* ===== NOTICE SECTION ===== */
 .notice-container {
     display: flex;
     gap: 20px;
     padding: 20px 40px;
 }
 
-.notice-display,
+/* LEFT SIDE */
+.notice-display {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-display h3 {
+    margin-top: 0;
+}
+
+.notice-display ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* FIXED ALIGNMENT */
+.notice-display li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* RIGHT SIDE INPUT */
 .notice-input {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
-}
-
-.notice-display {
-    flex: 2;
-}
-
-.notice-input {
     flex: 1;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
 }
 
 .notice-input textarea {
@@ -206,6 +213,47 @@ hr {
     resize: none;
 }
 
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.save {
+    background: #1e3c72;
+    color: white;
+}
+
+.clear {
+    background: #d9534f;
+    color: white;
+}
+
+.btn-group button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== DELETE BUTTON FIX ===== */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
 /* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
 
