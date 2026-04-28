@@ -298,16 +298,15 @@ hr {
     }
 
     .nav {
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-        flex-wrap: nowrap;
-    }
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;   /* 🔥 navbar niche */
+    flex-wrap: nowrap;
+}
 
-    .nav a {
-          margin-top: 100px;
-        font-size: 14px;
-    }
+.nav a {
+    font-size: 14px;
+}
 
     .cards {
         flex-direction: column;
