@@ -11,18 +11,20 @@ body {
 
 /* ===== HEADER ===== */
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px;
+    background: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    padding: 15px 40px;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
-/* LOGO */
+/* ===== LOGO ===== */
 .logo img {
     width: 100px;
     height: 80px;
@@ -30,40 +32,68 @@ body {
     object-fit: cover;
 }
 
-/* TITLE CENTER */
+/* ===== TITLE ===== */
 .title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    flex: 1;
 }
 
 .title h1 {
     margin: 0;
-    font-size: 24px;
-    color: #0b3d5c;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #1e3c72;
 }
 
 .title p {
     margin-top: 5px;
+    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
     font-size: 13px;
     color: gray;
 }
 
-/* NAV */
+/* ===== MARQUEE ===== */
+marquee {
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* ===== NAVBAR ===== */
 .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
+    padding-right: 40px;   /* 🔥 balanced right spacing */
+    gap: 22px;     
+    margin-top: 8px;   
 }
 
 .nav a {
-    margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
     color: black;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .nav a:hover {
     color: #1e3c72;
+    transition: 0.3s;
+}
+
+/* ===== HR LINE ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 5px 40px;
 }
 
 /* ===== MAIN CONTENT ===== */
@@ -74,12 +104,7 @@ body {
 }
 
 /* ===== HR ===== */
-hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin-bottom: 20px;
-}
+
 
 /* ===== SECTIONS ===== */
 .section {
