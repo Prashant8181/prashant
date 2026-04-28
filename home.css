@@ -3,14 +3,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f6f9;
-    padding-top:100px;
+    padding-top:120px;
 }
 
-h1 {
-    text-align: center;
-    color: #0b3d5c;
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
 }
-
 
 .logo img {
     width: 100px;
@@ -29,21 +32,21 @@ h1 {
     font-size: 26px;
     letter-spacing: 2px;
     font-weight: bold;
-    padding-right: 90px;
 }
 
 .title p {
     margin-top: 5px;
     font-size: 13px;
     color: gray;
-    padding-right:90px;
 }
+
+
 
 /*For herader freeze*/
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 15px 40px;
     background: white;
 
@@ -53,14 +56,6 @@ h1 {
     width: 100%;
     z-index: 1000;     /* stay above */
 }
-
-/* .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: white;
-} */
 
 .title {
     position: absolute;
@@ -74,15 +69,18 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    margin-left: 25px;
 }
 
+/* Add spacing between links */
+.nav a {
+    margin-left: 25px;
+}
 
 /* Align nov properly */
 .nav {
     display: flex;
-    margin-left: auto;
-    padding-right: 60px;   /* match fetch.css */
+    margin-left: auto;   /* 🔥 THIS pushes it to RIGHT */
+    padding-right: 80px;
 }
 
  /* hover effect on links */
@@ -98,21 +96,18 @@ hr {
     margin: 5px 40px;
 }
 
-
 /* ===== SUMMARY CARDS ===== */
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;   /* ✅ SAME AS fetch.css behavior */
-    gap: 20px;
+    justify-content: space-around;
     padding: 20px;
+    gap: 20px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    flex: 1 1 220px;     /* ✅ responsive like fetch.css */
-    max-width: 250px;
+    width: 220px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
