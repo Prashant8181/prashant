@@ -33,13 +33,27 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
+      position: relative;
+    left: -15px;   
 }
 
 .title p {
     margin-top: 5px;
     font-size: 13px;
     color: gray;
+    position: relative;
+    left: -8px;   
 }
+
+/* .title h1 {
+    position: relative;
+    left: -8px;   /* 🔥 title left */
+}
+
+.title p {
+    position: relative;
+    left: -8px;   /* 🔥 subtitle left */
+} */
 
 
 
