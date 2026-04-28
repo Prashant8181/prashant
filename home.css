@@ -66,7 +66,8 @@ marquee {
     justify-content: center;
     margin-left: auto;
     padding-right: 40px;   /* 🔥 balanced right spacing */
-    gap: 22px;             /* 🔥 even spacing */
+    gap: 22px;     
+    margin-top: 8px;   
 }
 
 .nav a {
