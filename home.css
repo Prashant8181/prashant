@@ -73,7 +73,6 @@ body {
 
 /* Add spacing between links */
 .nav a {
-    margin-top: -30px;
     margin-left: 25px;
 }
 
@@ -301,6 +300,7 @@ hr {
     }
 
     .nav a {
+          margin-top: -30px;
         font-size: 14px;
     }
 
