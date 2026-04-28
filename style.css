@@ -7,6 +7,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f6f9;
+    padding-top: 120px;
+    overflow-x: hidden;
 }
 
 /* ===== HEADER ===== */
@@ -22,6 +24,7 @@ body {
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+    border-bottom: 1px solid #eee;
 }
 
 /* ===== LOGO ===== */
@@ -47,13 +50,15 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
+    white-space: nowrap;
 }
 
 .title p {
     margin-top: 5px;
-    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
+    margin-bottom: 8px;
     font-size: 13px;
     color: gray;
+    white-space: nowrap;
 }
 
 /* ===== MARQUEE ===== */
@@ -68,9 +73,9 @@ marquee {
     align-items: center;
     justify-content: center;
     margin-left: auto;
-    padding-right: 40px;   /* 🔥 balanced right spacing */
-    gap: 22px;     
-    margin-top: 8px;   
+    padding-right: 40px;
+    gap: 22px;
+    margin-top: 8px;
 }
 
 .nav a {
@@ -81,6 +86,7 @@ marquee {
     margin: 0;
     padding: 0;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .nav a:hover {
@@ -99,23 +105,23 @@ hr {
 /* ===== MAIN CONTENT ===== */
 .main-content {
     max-width: 1200px;
-    margin: 120px auto 20px;  /* 🔥 space for fixed header */
+    margin: 120px auto 20px;
     padding: 20px;
+    width: 100%;
 }
 
-/* ===== HR ===== */
-
-
-/* ===== SECTIONS ===== */
+/* ===== SECTION ===== */
 .section {
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .section h3 {
     background: #0b3d5c;
     color: white;
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 /* ===== INPUT ===== */
@@ -126,9 +132,10 @@ input {
     max-width: 250px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
-/* ===== BOX (SELECT + INPUT GROUP) ===== */
+/* ===== BOX ===== */
 .box {
     display: inline-block;
     width: 250px;
@@ -141,6 +148,8 @@ input {
     height: 38px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
 }
 
 /* ===== TABLE ===== */
@@ -148,6 +157,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    background: white;
 }
 
 th {
@@ -155,7 +165,8 @@ th {
     color: white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
@@ -170,6 +181,7 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 button:hover {
@@ -184,7 +196,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* ===== CENTER FIX ===== */
+/* ===== CENTER ===== */
 center {
     display: block;
     text-align: center;
