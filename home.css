@@ -259,22 +259,20 @@ hr {
     background: #cc0000;
 }
 /* ===== MOBILE VIEW ===== */
-@media (max-width: 768px) {
+/* 🔥 EXACT FIX = navbar same place, ONLY title closer to logo + slightly left */
 
-    body {
-        padding-top: 210px;
-    }
+@media (max-width: 768px) {
 
     .header {
         padding: 10px;
     }
 
-    /* LOGO + TITLE ROW */
+    /* LOGO + TITLE */
     .header-top {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 1px;   /* 🔥 logo ke baad only 1px space */
+        gap: 2px;   /* 🔥 logo ke baad very small space */
     }
 
     .logo img {
@@ -285,25 +283,25 @@ hr {
     .title {
         text-align: left;
         flex: 1;
-        margin-left: 1px;   /* 🔥 title logo ke bilkul pass */
+        margin-left: 0;   /* 🔥 no extra gap */
     }
 
-    /* H1 LEFT */
+    /* TITLE MAIN */
     .title h1 {
         font-size: 18px;
         white-space: nowrap;
         letter-spacing: 1px;
         margin: 0;
         position: relative;
-        left: -4px;   /* 🔥 slightly left */
+        left: -6px;   /* 🔥 slightly left */
     }
 
-    /* P LEFT */
+    /* SUBTITLE */
     .title p {
         font-size: 11px;
         margin-top: 3px;
         position: relative;
-        left: -4px;   /* 🔥 slightly left */
+        left: -6px;   /* 🔥 same alignment */
     }
 
     /* MARQUEE */
@@ -313,20 +311,20 @@ hr {
         text-align: center;
     }
 
-    /* NAVBAR */
+    /* 🔥 NAVBAR ORIGINAL POSITION */
     .nav {
         display: flex;
         justify-content: center;
         gap: 15px;
-        margin-top: 12px;
+        margin-top: 0;   /* 🔥 DO NOT MOVE WHOLE NAVBAR */
         flex-wrap: nowrap;
     }
 
-    /* NAV LINKS ONLY */
+    /* 🔥 ONLY LINKS LITTLE DOWN */
     .nav a {
         font-size: 14px;
         position: relative;
-        top: 6px;   /* 🔥 slightly down */
+        top: 2px;   /* 🔥 slight down only */
     }
 
     .cards {
