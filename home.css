@@ -56,6 +56,10 @@ body {
     width: 100%;
     z-index: 1000;     /* stay above */
 }
+marquee {
+        font-size: 11px;
+        margin-top: 6px;
+    }
 
 .title {
     position: absolute;
@@ -300,7 +304,7 @@ hr {
     }
 
     .nav a {
-          margin-top: -30px;
+          margin-top: 30px;
         font-size: 14px;
     }
 
