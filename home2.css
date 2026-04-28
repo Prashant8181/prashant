@@ -16,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* ===================================================== */
 /* NAVBAR */
 /* ===================================================== */
@@ -29,8 +28,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-size: cover;
     z-index: 1000;
+    background: transparent;
 }
 
 /* ===================================================== */
@@ -140,93 +139,138 @@ body {
 }
 
 /* ===================================================== */
-/* MOBILE VIEW */
+/* MARQUEE DESKTOP HIDE */
+/* ===================================================== */
+.marquee-box {
+    display: none;
+}
+
+/* ===================================================== */
+/* MOBILE VIEW ONLY */
 /* ===================================================== */
 @media (max-width: 768px) {
+
+    /* ===== BODY ===== */
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        background: #f5f3ef;
+    }
+
     body {
-        padding-top: 235px; /* 🔥 extra space for marquee */
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 0;
     }
 
-    .header {
-        padding: 10px;
-    }
-
-    .header-top {
-        justify-content: flex-start; /* logo left */
+    /* ===== NAVBAR ===== */
+    .navbar {
+        padding: 10px 14px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: transparent;
     }
 
+    /* ===== LOGO ===== */
     .logo img {
-        width: 50px;
+        height: 58px;
+        width: auto;
+        margin-left: 0;
+        transform: translateY(-6px);
+        object-fit: contain;
     }
 
-    .title {
-        text-align: left;
-        flex: 1;
-    }
-
-    .title h1 {
-        font-size: 18px;   /* 🔥 title ek row me */
-        white-space: nowrap;
-        letter-spacing: 1px;
-    }
-
-    .title p {
-        font-size: 11px;
-        margin-top: 3px;
-        padding-left: 8px;
-    }
-
-    /* 🔥 PREMIUM MARQUEE */
-    marquee {
-        font-size: 8px;
-        margin-top: 8px;
-        background: linear-gradient(90deg, #0b3d5c, #145374);
-        color: white;
-        padding: 4px 7px;
-        border-radius: 20px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-
-    .nav {
-        justify-content: center;
-        gap: 15px;
-        margin-top: 18px;
+    /* ===== NAV LINKS ===== */
+    .navbar ul {
+        display: flex;
+        gap: 14px;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        align-items: center;
         flex-wrap: nowrap;
     }
 
-    .nav a {
-        margin-top: 60px;
+    .navbar ul li a {
         font-size: 14px;
+        white-space: nowrap;
+        color: #b23a3a;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
     }
 
-    .cards {
-        flex-direction: column;
+    /* ===== MOBILE ONLY MARQUEE ===== */
+    .marquee-box {
+        display: block;
+        position: absolute;
+        top: 78px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        z-index: 999;
+        text-align: center;
+    }
+
+    marquee {
+        font-size: 11px;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(90deg, #5f7742, #7d9458);
+        padding: 7px 12px;
+        border-radius: 25px;
+        letter-spacing: 0.6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
 
-    .card {
-        width: 90%;
-        max-width: 95%;
-    }
-
-    .buttons button {
-        width: 95%;
-        padding: 6px;
-        font-size: 7px;
-    }
-
-    .notice-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    table {
+    /* ===== BG IMAGE FIX ===== */
+    .bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;          /* full image visible */
+        object-position: top center;  /* image top align */
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        margin-top: -45px;            /* slight upward */
+    }
+
+    /* ===== BUTTON POSITION ===== */
+    .content {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn {
+        padding: 10px 22px;
+        font-size: 12px;
+        border-radius: 10px;
+        background: #5f7742;
+        color: white;
+        font-weight: 600;
+    }
+
+    .btn:hover {
+        background: #4e6535;
     }
 }
