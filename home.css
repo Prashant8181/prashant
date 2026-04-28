@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f6f9;
-    padding-top: 140px; /* header fixed space */
+    padding-top: 180px; /* 🔥 header ke niche cards hide nahi honge */
 }
 
 h1 {
@@ -13,18 +13,17 @@ h1 {
 
 /* ===== LOGO ===== */
 .logo img {
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: auto;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* ===== HEADER ===== */
 .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
+    flex-direction: column;
+    padding: 15px 20px;
     background: white;
     position: fixed;
     top: 0;
@@ -34,16 +33,22 @@ h1 {
     box-sizing: border-box;
 }
 
-/* HEADER TOP */
+/* ===== TOP SECTION (LOGO + TITLE) ===== */
 .header-top {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
 }
 
 /* ===== TITLE ===== */
 .title {
-    text-align: center;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    position: static;   /* 🔥 old absolute remove */
+    transform: none;
 }
 
 .title h1 {
@@ -52,31 +57,42 @@ h1 {
     letter-spacing: 2px;
     font-weight: bold;
     color: #0b3d5c;
-    white-space: nowrap; /* 🔥 prevents break */
+
+    /* 🔥 MAIN FIX */
+    white-space: nowrap;   /* ek row me */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
 }
 
 .title p {
     margin-top: 5px;
     font-size: 13px;
     color: gray;
+    padding: 0;
 }
 
 /* ===== MARQUEE ===== */
 marquee {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
 }
 
 /* ===== NAV ===== */
 .nav {
     display: flex;
-    margin-left: auto;
-    padding-right: 60px;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 .nav a {
-    margin-left: 25px;
     text-decoration: none;
     font-weight: bold;
     color: black;
@@ -93,10 +109,10 @@ hr {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 5px 40px;
+    margin: 5px 0;
 }
 
-/* ===== CARDS ===== */
+/* ===== SUMMARY CARDS ===== */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -120,50 +136,105 @@ hr {
     transform: translateY(-5px);
 }
 
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue { background: #dcecff; }
+.green { background: #d8f5e3; }
+.orange { background: #ffe7d6; }
+.purple { background: #e4ddff; }
+
+/* ===== BUTTONS ===== */
+.buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.buttons button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 25px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== NOTICE ===== */
+.notice-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.notice-display,
+.notice-input {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-display {
+    flex: 2;
+}
+
+.notice-input {
+    flex: 1;
+}
+
+.notice-input textarea {
+    width: 100%;
+    height: 80px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
 /* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
 
     body {
-        padding-top: 190px; /* 🔥 enough space for fixed header */
+        padding-top: 210px; /* 🔥 mobile header height */
     }
 
     .header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         padding: 10px;
     }
 
     .header-top {
-        display: flex;
-        flex-direction: row;
+        justify-content: flex-start; /* logo left */
         align-items: center;
-        justify-content: center;
         gap: 10px;
-        width: 100%;
     }
 
-    /* LOGO */
     .logo img {
-        width: 55px;
-        height: 55px;
-        object-fit: contain;
+        width: 50px;
     }
 
-    /* 🔥 MAIN FIX */
     .title {
-        position: static !important;
-        transform: none !important;
-        left: auto !important;
-        flex: unset;
-        min-width: 0;
         text-align: left;
+        flex: 1;
     }
 
     .title h1 {
-        font-size: 18px;
-        line-height: 1.2;
-        white-space: normal; /* 🔥 allows proper row */
+        font-size: 18px;   /* 🔥 title ek row me */
+        white-space: nowrap;
         letter-spacing: 1px;
     }
 
@@ -172,47 +243,46 @@ hr {
         margin-top: 3px;
     }
 
-    /* MARQUEE */
     marquee {
-        display: block;
-        width: 100%;
-        text-align: center;
         font-size: 11px;
-        margin-top: 8px;
+        margin-top: 6px;
     }
 
-    /* NAV */
     .nav {
-        display: flex;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 18px;
+        gap: 15px;
         margin-top: 10px;
-        padding-right: 0;
-        margin-left: 0;
-        width: 100%;
+        flex-wrap: nowrap;
     }
 
     .nav a {
-        margin: 0;
         font-size: 14px;
     }
 
-    hr {
-        margin: 8px 0;
-        width: 100%;
-    }
-
-    /* CARDS */
     .cards {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
     }
 
     .card {
         width: 90%;
         max-width: 95%;
+    }
+
+    .buttons button {
+        width: 95%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .notice-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
