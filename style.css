@@ -101,7 +101,8 @@ hr {
 /* ===== MAIN CONTENT ===== */
 .main-content {
     max-width: 1200px;
-    margin: 120px auto 20px;
+    /* margin: 120px auto 20px; */
+    margin: 600px auto 20px;
     padding: 20px;
     width: 100%;
 }
