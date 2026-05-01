@@ -438,7 +438,7 @@ td, th {
         gap: 12px;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 8px;
+        margin-top: 2px;
         flex-wrap: wrap;
         width: 100%;
     }
@@ -557,7 +557,7 @@ td, th {
         overflow-x: auto;
         white-space: nowrap;
         font-size: 13px;
-        margin-top: 10px;
+        margin-top: 10px
         background: white;
         border-radius: 8px;
     }
