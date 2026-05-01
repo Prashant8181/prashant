@@ -95,7 +95,8 @@ hr {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 5px 40px;
+    /* margin: 5px 40px; */
+     margin: 1px 15px;
 }
 /* ===== MAIN CONTENT ===== */
 .main-content {
