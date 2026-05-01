@@ -15,8 +15,8 @@ body {
 .header {
     display: flex;
     align-items: center;
-justify-content: space-between;
-    padding: 15px 40px;
+    justify-content: space-between;
+    padding: 15px 40px 4px;   /* reduced bottom space */
     background: white;
     position: fixed;
     top: 0;
@@ -24,6 +24,7 @@ justify-content: space-between;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 /* ===== LOGO ===== */
@@ -40,6 +41,8 @@ justify-content: space-between;
     flex: 1;
     position: static;
     transform: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .title h1 {
@@ -49,20 +52,15 @@ justify-content: space-between;
     font-weight: bold;
     color: #1e3c72;
     padding-right: 0;
+    line-height: 1.1;
 }
 
 .title p {
-    margin-top: 5px;
-    margin-bottom: 8px;
+    margin: 3px 0 2px 0;   /* tighter */
     font-size: 13px;
     color: gray;
     padding-right: 0;
-}
-
-/* ===== MARQUEE ===== */
-marquee {
-    font-size: 11px;
-    margin-top: 6px;
+    line-height: 1.1;
 }
 
 /* ===== NAVBAR ===== */
@@ -73,6 +71,8 @@ marquee {
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 4px;
+    margin-bottom: 0;
 }
 
 .nav a {
@@ -93,15 +93,16 @@ marquee {
 /* ===== HR LINE ===== */
 hr {
     border: none;
-    height: 2px;
+    height: 1px;
     background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 5px 40px;
+    margin: 2px 0 0 0;   /* KEY FIX */
+    width: 100%;
 }
+
 /* ===== MAIN CONTENT ===== */
 .main-content {
     max-width: 1200px;
-    /* margin: 120px auto 20px; */
-    margin: 600px auto 20px;
+    margin: 140px auto 20px;   /* proper desktop */
     padding: 20px;
     width: 100%;
 }
@@ -199,17 +200,13 @@ center {
     margin-bottom: 30px;
 }
 
-
-/* ===== FULL MOBILE PAGE PERFECT STRUCTURE (EXACT FIRST PAGE STYLE) ===== */
+/* ========================================================= */
+/* ===== MOBILE VIEW ===== */
+/* ========================================================= */
 @media (max-width: 768px) {
 
-    /* ===== GLOBAL ===== */
-    * {
-        box-sizing: border-box;
-    }
-
     body {
-        padding-top: 185px;   /* reduced header total height */
+        padding-top: 150px;   /* reduced */
         margin: 0;
         overflow-x: hidden;
         background: #f4f6f9;
@@ -217,44 +214,25 @@ center {
 
     /* ===== HEADER ===== */
     .header {
-        padding: 8px 10px 0px;   /* bottom padding removed */
+        padding: 8px 10px 0;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 1000;
-    }
-
-    /* ===== TOP ROW ===== */
-    .header-top {
-        display: flex;
-        align-items: center;
         justify-content: flex-start;
-        gap: 2px;
-        width: 100%;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        align-items: flex-start;
     }
 
     /* ===== LOGO ===== */
     .logo img {
         width: 50px;
         height: auto;
-        object-fit: contain;
     }
 
     /* ===== TITLE ===== */
     .title {
         text-align: left;
-        flex: 1;
-        margin-left: 0;
-        position: static;
-        transform: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .title h1 {
@@ -262,26 +240,18 @@ center {
         white-space: nowrap;
         letter-spacing: 1px;
         margin: 0;
-        line-height: 1.1;
+        line-height: 1;
         position: relative;
         left: -6px;
     }
 
     .title p {
         font-size: 11px;
-        margin: 1px 0 0 0;   /* very tight */
-        line-height: 1.1;
+        margin: 1px 0 0 0;
+        line-height: 1;
         position: relative;
         left: -6px;
         white-space: nowrap;
-    }
-
-    /* ===== MARQUEE ===== */
-    marquee {
-        font-size: 11px;
-        margin-top: 4px;
-        text-align: center;
-        width: 100%;
     }
 
     /* ===== NAVBAR ===== */
@@ -290,7 +260,7 @@ center {
         justify-content: center;
         align-items: center;
         gap: 12px;
-        margin: 2px 0 0 0;   /* reduced top gap */
+        margin: 2px 0 0 0;
         padding: 0;
         flex-wrap: nowrap;
         width: 100%;
@@ -307,16 +277,13 @@ center {
         margin: 0;
         padding: 0;
         line-height: 1;
-        position: relative;
-        top: 0;
         white-space: nowrap;
         flex-shrink: 0;
-        text-decoration: none;
     }
 
-    /* ===== HR LINE FIX (MAIN ISSUE) ===== */
+    /* ===== HR ===== */
     hr {
-        margin: 2px 0 0 0;   /* 🔥 reduced navbar to hr gap */
+        margin: 1px 0 0 0;   /* FINAL FIX */
         height: 1px;
     }
 
@@ -327,7 +294,6 @@ center {
         padding: 12px;
     }
 
-    /* ===== SECTION ===== */
     .section {
         margin-bottom: 18px;
         width: 100%;
@@ -336,12 +302,10 @@ center {
     .section h3 {
         font-size: 15px;
         padding: 12px;
-        text-align: left;
         border-radius: 8px;
         margin-bottom: 10px;
     }
 
-    /* ===== INPUT FIELDS ===== */
     input {
         width: 100%;
         max-width: 100%;
@@ -349,11 +313,9 @@ center {
         padding: 14px;
         font-size: 14px;
         border-radius: 8px;
-        border: 1px solid #ccc;
         display: block;
     }
 
-    /* ===== LABEL ===== */
     label {
         display: block;
         margin-top: 8px;
@@ -361,7 +323,6 @@ center {
         font-weight: bold;
     }
 
-    /* ===== BOX ===== */
     .box {
         display: block;
         width: 100%;
@@ -373,26 +334,24 @@ center {
         height: 45px;
         font-size: 14px;
         border-radius: 8px;
-        padding: 8px;
     }
 
-    /* ===== TABLE ===== */
     table {
         display: block;
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
         font-size: 13px;
-        background: white;
     }
 
-    th, td {
+    th,
+    td {
         padding: 8px;
         min-width: 80px;
     }
 
-    /* ===== BUTTON ===== */
-    button {
+    button,
+    .action-btn {
         width: 100%;
         padding: 12px;
         font-size: 14px;
@@ -400,15 +359,6 @@ center {
         border-radius: 8px;
     }
 
-    /* ===== ACTION BUTTONS ===== */
-    .action-btn {
-        width: 100%;
-        margin: 8px 0;
-        padding: 14px;
-        font-size: 14px;
-    }
-
-    /* ===== CENTER ===== */
     center {
         width: 100%;
         margin-bottom: 20px;
