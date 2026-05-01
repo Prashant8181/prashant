@@ -209,7 +209,7 @@ center {
     }
 
     body {
-        padding-top: 210px;   /* same first page fixed header space */
+        padding-top: 185px;   /* reduced header total height */
         margin: 0;
         overflow-x: hidden;
         background: #f4f6f9;
@@ -217,7 +217,7 @@ center {
 
     /* ===== HEADER ===== */
     .header {
-        padding: 8px 10px 2px;
+        padding: 8px 10px 0px;   /* bottom padding removed */
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -235,6 +235,8 @@ center {
         justify-content: flex-start;
         gap: 2px;
         width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     /* ===== LOGO ===== */
@@ -251,6 +253,8 @@ center {
         margin-left: 0;
         position: static;
         transform: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .title h1 {
@@ -258,14 +262,15 @@ center {
         white-space: nowrap;
         letter-spacing: 1px;
         margin: 0;
+        line-height: 1.1;
         position: relative;
         left: -6px;
     }
 
     .title p {
         font-size: 11px;
-        margin-top: 3px;
-        margin-bottom: 1px;
+        margin: 1px 0 0 0;   /* very tight */
+        line-height: 1.1;
         position: relative;
         left: -6px;
         white-space: nowrap;
@@ -274,20 +279,19 @@ center {
     /* ===== MARQUEE ===== */
     marquee {
         font-size: 11px;
-        margin-top: 6px;
+        margin-top: 4px;
         text-align: center;
         width: 100%;
     }
 
-    /* ===== NAVBAR (EXACT FIRST PAGE CLEAN LOOK) ===== */
+    /* ===== NAVBAR ===== */
     .nav {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 12px;
-        margin-left: 0;
-        padding-right: 0;
-        margin-top: 4px;
+        margin: 2px 0 0 0;   /* reduced top gap */
+        padding: 0;
         flex-wrap: nowrap;
         width: 100%;
         overflow-x: auto;
@@ -302,11 +306,18 @@ center {
         font-size: 13px;
         margin: 0;
         padding: 0;
+        line-height: 1;
         position: relative;
-        top: 2px;
+        top: 0;
         white-space: nowrap;
         flex-shrink: 0;
         text-decoration: none;
+    }
+
+    /* ===== HR LINE FIX (MAIN ISSUE) ===== */
+    hr {
+        margin: 2px 0 0 0;   /* 🔥 reduced navbar to hr gap */
+        height: 1px;
     }
 
     /* ===== MAIN CONTENT ===== */
@@ -403,4 +414,3 @@ center {
         margin-bottom: 20px;
     }
 }
-
