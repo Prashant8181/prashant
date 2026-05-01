@@ -15,7 +15,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+justify-content: space-between;
     padding: 15px 40px;
     background: white;
     position: fixed;
@@ -36,11 +36,10 @@ body {
 
 /* ===== TITLE ===== */
 .title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
     flex: 1;
+    position: static;
+    transform: none;
 }
 
 .title h1 {
@@ -49,13 +48,15 @@ body {
     letter-spacing: 2px;
     font-weight: bold;
     color: #1e3c72;
+    padding-right: 0;
 }
 
 .title p {
     margin-top: 5px;
-    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
+    margin-bottom: 8px;
     font-size: 13px;
     color: gray;
+    padding-right: 0;
 }
 
 /* ===== MARQUEE ===== */
@@ -67,12 +68,11 @@ marquee {
 /* ===== NAVBAR ===== */
 .nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: auto;
-    padding-right: 40px;   /* 🔥 balanced right spacing */
-    gap: 22px;     
-    margin-top: 8px;   
+    padding-right: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav a {
