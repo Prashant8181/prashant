@@ -22,21 +22,20 @@ h1 {
 .title {
     text-align: center;
     flex: 1;
+    position: static;
+    transform: none;
 }
 
-.title h1 {
-    margin: 0;
-    font-size: 26px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    padding-right: 90px;
-}
-
+.title h1,
 .title p {
-    margin-top: 5px;
-    font-size: 13px;
-    color: gray;
-    padding-right:90px;
+    padding-right: 0;
+}
+
+.nav {
+    display: flex;
+    margin-left: auto;
+    padding-right: 0;
+    gap: 20px;
 }
 
 /*For herader freeze*/
@@ -62,12 +61,7 @@ h1 {
     background: white;
 } */
 
-.title {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
+
 /*Nav style */
 .nav a {
     margin-left: 20px;
@@ -81,12 +75,7 @@ h1 {
     margin-left: 25px;
 }
 
-/* Align nov properly */
-.nav {
-    display: flex;
-    margin-left: auto;   /* 🔥 THIS pushes it to RIGHT */
-    padding-right: 150px;
-}
+/
 
  /* hover effect on links */
 .nav a:hover {
@@ -164,7 +153,7 @@ button:hover {
 /* 🔍 GRID */
 .search-grid {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr 1.5fr; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -390,13 +379,11 @@ td, th {
 
     body {
         margin: 0;
-        padding-top: 210px;   /* same as first page */
         overflow-x: hidden;
         background: #f4f6f9;
+        padding-top: 180px;   /* cleaner header space */
     }
 
-    /* ===== HEADER ===== */
-    
     /* ===== HEADER ===== */
     .header {
         padding: 10px;
@@ -410,15 +397,6 @@ td, th {
         z-index: 1000;
     }
 
-    /* ===== TOP ROW ===== */
-    .header-top {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 2px;
-        width: 100%;
-    }
-
     /* ===== LOGO ===== */
     .logo img {
         width: 50px;
@@ -428,40 +406,31 @@ td, th {
 
     /* ===== TITLE ===== */
     .title {
-        text-align: left;
+        text-align: center;
         flex: 1;
         margin-left: 0;
         position: static;
         transform: none;
+        width: 100%;
     }
 
     .title h1 {
         font-size: 18px;
-        white-space: nowrap;
+        white-space: normal;
         letter-spacing: 1px;
         margin: 0;
-        position: relative;
-        left: -6px;
+        padding-right: 0;
     }
 
     .title p {
         font-size: 11px;
         margin-top: 3px;
         margin-bottom: 4px;
-        position: relative;
-        left: -6px;
-        white-space: nowrap;
+        white-space: normal;
+        padding-right: 0;
     }
 
-    /* ===== MARQUEE ===== */
-    marquee {
-        font-size: 11px;
-        margin-top: 6px;
-        text-align: center;
-        width: 100%;
-    }
-
-    /* ===== NAVBAR (EXACT FIRST PAGE CLEAN LOOK) ===== */
+    /* ===== NAVBAR ===== */
     .nav {
         display: flex;
         justify-content: center;
@@ -470,24 +439,15 @@ td, th {
         margin-left: 0;
         padding-right: 0;
         margin-top: 8px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    .nav::-webkit-scrollbar {
-        display: none;
     }
 
     .nav a {
         font-size: 13px;
         margin: 0;
-        padding: 0;
-        position: relative;
-        top: 2px;
+        padding: 4px 6px;
         white-space: nowrap;
-        flex-shrink: 0;
         text-decoration: none;
     }
 
@@ -499,16 +459,10 @@ td, th {
     }
 
     /* ===== CARDS ===== */
-    .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
     .card {
         width: 100%;
         padding: 15px;
-        margin-bottom: 0;
+        margin-bottom: 15px;
         border-radius: 14px;
     }
 
@@ -516,6 +470,7 @@ td, th {
     .card-header,
     .table-header,
     .pagination {
+        display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: stretch;
@@ -525,9 +480,8 @@ td, th {
     .table-actions {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 8px;
-        justify-content: center;
     }
 
     /* ===== SEARCH GRID ===== */
@@ -572,7 +526,9 @@ td, th {
 
     .total-section .date-range input,
     #upStart,
-    #upEnd {
+    #upEnd,
+    #totalStart,
+    #totalEnd {
         width: 100%;
         max-width: 100%;
     }
@@ -590,8 +546,8 @@ td, th {
     }
 
     .search-btn-box {
-        grid-column: auto;
         width: 100%;
+        grid-column: auto;
     }
 
     /* ===== TABLE ===== */
@@ -614,8 +570,12 @@ td, th {
     }
 
     /* ===== PAGINATION ===== */
+    .pagination {
+        gap: 10px;
+    }
+
     .pagination button {
-        width: 48%;
+        width: 100%;
     }
 
     /* ===== SUGGESTIONS ===== */
@@ -641,7 +601,7 @@ td, th {
         margin: 8px 0;
     }
 
-    /* ===== EXTRA FIX ===== */
+    /* ===== EXTRA ===== */
     h1 {
         font-size: inherit;
     }
