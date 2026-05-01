@@ -95,8 +95,7 @@ hr {
     border: none;
     height: 2px;
     background: linear-gradient(to right, transparent, #ccc, transparent);
-    /* margin: 5px 40px; */
-     margin: 1px 15px;
+    margin: 5px 40px;
 }
 /* ===== MAIN CONTENT ===== */
 .main-content {
@@ -402,11 +401,6 @@ center {
     center {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    /* ===== HR ===== */
-    hr {
-        margin: 0px 0;
     }
 }
 
