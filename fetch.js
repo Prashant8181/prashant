@@ -370,23 +370,22 @@ function prevPage() {
         showPage(currentPage);
     }
 }
-//Fuction for scroll to business date range section 
+//Function for scrolling to the business date range section 
 function handleTotalBusiness() {
     const startDate = document.getElementById("totalStart").value;
     const endDate = document.getElementById("totalEnd").value;
     const section = document.getElementById("totalBusinessSection");
+if (!startDate || !endDate) {
+    alert("Please select date range from 'From' to 'To'.");
 
-    // If dates not selected
-    if (!startDate || !endDate) {
-        section.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        });
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
-        document.getElementById("totalStart").focus();
-        return;
-    }
-
+    document.getElementById("totalStart").focus();
+    return;
+}
     // If dates selected
     getTotal();
 }
