@@ -216,7 +216,7 @@ center {
 
     /* ===== HEADER ===== */
     .header {
-        padding: 10px;
+        padding: 8px 10px 2px;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -264,7 +264,7 @@ center {
     .title p {
         font-size: 11px;
         margin-top: 3px;
-        margin-bottom: 4px;
+        margin-bottom: 1px;
         position: relative;
         left: -6px;
         white-space: nowrap;
@@ -286,7 +286,7 @@ center {
         gap: 12px;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 8px;
+        margin-top: 0px;
         flex-wrap: nowrap;
         width: 100%;
         overflow-x: auto;
@@ -404,7 +404,7 @@ center {
 
     /* ===== HR ===== */
     hr {
-        margin: 2px 0;
+        margin: 0px 0;
     }
 }
 
