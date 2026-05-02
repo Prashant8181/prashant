@@ -372,29 +372,24 @@ td, th {
 /* ========================================================= */
 @media (max-width: 768px) {
 
-    /* ===== GLOBAL ===== */
-    * {
-        box-sizing: border-box;
-    }
-
     body {
         margin: 0;
         overflow-x: hidden;
         background: #f4f6f9;
-        padding-top: 180px;   /* cleaner header space */
     }
 
     /* ===== HEADER ===== */
     .header {
-    padding: 8px 10px 4px;
+        padding: 8px 10px 4px;
         display: flex;
         flex-direction: column;
         width: 100%;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         background: white;
         z-index: 1000;
+        border-bottom: 1px solid #ccc;
     }
 
     /* ===== LOGO ===== */
@@ -420,6 +415,7 @@ td, th {
         letter-spacing: 1px;
         margin: 0;
         padding-right: 0;
+        line-height: 1.1;
     }
 
     .title p {
@@ -428,6 +424,7 @@ td, th {
         margin-bottom: 1px;
         white-space: normal;
         padding-right: 0;
+        line-height: 1.1;
     }
 
     /* ===== NAVBAR ===== */
@@ -438,7 +435,7 @@ td, th {
         gap: 12px;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 0px;
+        margin-top: 0;
         flex-wrap: wrap;
         width: 100%;
     }
@@ -449,158 +446,90 @@ td, th {
         padding: 4px 6px;
         white-space: nowrap;
         text-decoration: none;
+        line-height: 1.2;
     }
 
-    /* ===== CONTAINER ===== */
-    .container {
+    /* ===== HR ===== */
+    hr {
+        display: none;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content {
         width: 100%;
         margin: 0;
         padding: 12px;
     }
 
-    /* ===== CARDS ===== */
-    .card {
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 14px;
-    }
-
-    /* ===== CARD HEADER ===== */
-    .card-header,
-    .table-header,
-    .pagination {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: stretch;
-    }
-
-    .header-actions,
-    .table-actions {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    /* ===== SEARCH GRID ===== */
-    .search-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .field {
+    .section {
+        margin-bottom: 18px;
         width: 100%;
     }
 
-    /* ===== INPUT ===== */
-    .input-box {
-        width: 100%;
-        padding: 10px;
+    .section h3 {
+        font-size: 15px;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
 
-    .input-box input {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    /* ===== DATE RANGE ===== */
-    .date-range {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-    }
-
-    .total-section {
-        width: 100%;
-        grid-column: auto;
-    }
-
-    .total-section .date-range {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .total-section .date-range input,
-    #upStart,
-    #upEnd,
-    #totalStart,
-    #totalEnd {
+    input {
         width: 100%;
         max-width: 100%;
-    }
-
-    /* ===== BUTTONS ===== */
-    button,
-    .search-btn,
-    .reset-btn,
-    .total-btn,
-    .extract-btn1 {
-        width: 100%;
-        padding: 12px;
+        margin: 6px 0;
+        padding: 14px;
         font-size: 14px;
-        text-align: center;
+        border-radius: 8px;
+        display: block;
     }
 
-    .search-btn-box {
+    label {
+        display: block;
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .box {
+        display: block;
         width: 100%;
-        grid-column: auto;
+        margin: 8px 0;
     }
 
-    /* ===== TABLE ===== */
+    .box select {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
     table {
         display: block;
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
         font-size: 13px;
-        margin-top: 10px
-        background: white;
-        border-radius: 8px;
     }
 
     th,
     td {
         padding: 8px;
-        min-width: 90px;
-        text-align: center;
+        min-width: 80px;
     }
 
-    /* ===== PAGINATION ===== */
-    .pagination {
-        gap: 10px;
-    }
-
-    .pagination button {
+    button,
+    .action-btn {
         width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 8px;
+        border-radius: 8px;
     }
 
-    /* ===== SUGGESTIONS ===== */
-    .suggestions-box {
-        max-height: 120px;
-        font-size: 13px;
+    center {
+        width: 100%;
+        margin-bottom: 20px;
     }
-
-    /* ===== ICON BUTTONS ===== */
-    .view-btn,
-    .delete-btn {
-        padding: 6px 10px;
-        font-size: 12px;
-    }
-
-    /* ===== REMINDER ICON ===== */
-    .reminder-icon {
-        font-size: 16px;
-    }
-hr {
-    margin: 0;
 }
 
-    /* ===== EXTRA ===== */
-    h1 {
-        font-size: inherit;
-    }
 }
