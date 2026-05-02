@@ -7,7 +7,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f6f9;
-    padding-top: 120px;
     overflow-x: hidden;
 }
 
@@ -16,14 +15,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px 4px;   /* reduced bottom space */
+    padding: 15px 40px 4px;
     background: white;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
     flex-wrap: wrap;
 }
 
@@ -56,7 +55,7 @@ body {
 }
 
 .title p {
-    margin: 3px 0 2px 0;   /* tighter */
+    margin: 3px 0 2px 0;
     font-size: 13px;
     color: gray;
     padding-right: 0;
@@ -92,17 +91,13 @@ body {
 
 /* ===== HR LINE ===== */
 hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 2px 0 0 0;   /* KEY FIX */
-    width: 100%;
+    display: none;
 }
 
 /* ===== MAIN CONTENT ===== */
 .main-content {
     max-width: 1200px;
-    margin: 140px auto 20px;   /* proper desktop */
+    margin: 0 auto 20px;
     padding: 20px;
     width: 100%;
 }
@@ -200,19 +195,15 @@ center {
     margin-bottom: 30px;
 }
 
-/* ========================================================= */
 /* ===== MOBILE VIEW ===== */
-/* ========================================================= */
 @media (max-width: 768px) {
 
     body {
-        padding-top: 150px;   /* reduced */
         margin: 0;
         overflow-x: hidden;
         background: #f4f6f9;
     }
 
-    /* ===== HEADER ===== */
     .header {
         padding: 8px 10px 0;
         display: flex;
@@ -221,13 +212,11 @@ center {
         align-items: flex-start;
     }
 
-    /* ===== LOGO ===== */
     .logo img {
         width: 50px;
         height: auto;
     }
 
-    /* ===== TITLE ===== */
     .title {
         text-align: left;
         width: 100%;
@@ -254,7 +243,6 @@ center {
         white-space: nowrap;
     }
 
-    /* ===== NAVBAR ===== */
     .nav {
         display: flex;
         justify-content: center;
@@ -281,13 +269,10 @@ center {
         flex-shrink: 0;
     }
 
-    /* ===== HR ===== */
     hr {
-        margin: 1px 0 0 0;   /* FINAL FIX */
-        height: 1px;
+        display: none;
     }
 
-    /* ===== MAIN CONTENT ===== */
     .main-content {
         width: 100%;
         margin: 0;
