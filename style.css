@@ -205,6 +205,14 @@ center {
         overflow-x: hidden;
         background: #f4f6f9;
     }
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        background: #f4f6f9;
+    }
 
     .header {
         padding: 8px 10px 0;
@@ -245,31 +253,37 @@ center {
         white-space: nowrap;
     }
 
-    /* ===== NAVBAR ONLY UPDATED ===== */
     .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-left: 0;
-    padding-right: 0;
-    margin-top: 0;
-    flex-wrap: wrap;
-    width: 100%;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
-.nav a {
-    font-size: 13px;
-    margin: 0;
-    padding: 4px 6px;
-    white-space: nowrap;
-    text-decoration: none;
-}
-
+    .nav a {
+        font-size: 13px;
+        margin: 0;
+        padding: 4px 6px;
+        white-space: nowrap;
+        text-decoration: none;
+    }
 
     hr {
         display: none;
     }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 12px;
+    }
+}
+
 
     .main-content {
         width: 100%;
