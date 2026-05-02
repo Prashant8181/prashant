@@ -196,6 +196,7 @@ center {
 }
 
 /* ===== MOBILE VIEW ===== */
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
 
     body {
@@ -204,69 +205,75 @@ center {
         background: #f4f6f9;
     }
 
+    /* ===== HEADER ===== */
     .header {
-        padding: 8px 10px 0;
+        padding: 8px 10px 4px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: white;
+        z-index: 1000;
+        border-bottom: 1px solid #ccc;
     }
 
+    /* ===== LOGO ===== */
     .logo img {
         width: 50px;
         height: auto;
+        object-fit: contain;
     }
 
+    /* ===== TITLE ===== */
     .title {
-        text-align: left;
+        text-align: center;
+        flex: 1;
+        margin-left: 0;
+        position: static;
+        transform: none;
         width: 100%;
-        margin: 0;
-        padding: 0;
     }
 
     .title h1 {
         font-size: 18px;
-        white-space: nowrap;
+        white-space: normal;
         letter-spacing: 1px;
         margin: 0;
-        line-height: 1;
-        position: relative;
-        left: -6px;
+        padding-right: 0;
+        line-height: 1.1;
     }
 
     .title p {
         font-size: 11px;
-        margin: 1px 0 0 0;
-        line-height: 1;
-        position: relative;
-        left: -6px;
-        white-space: nowrap;
+        margin-top: 3px;
+        margin-bottom: 1px;
+        white-space: normal;
+        padding-right: 0;
+        line-height: 1.1;
     }
 
+    /* ===== NAVBAR ===== */
     .nav {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 12px;
-        margin: 2px 0 0 0;
-        padding: 0;
-        flex-wrap: nowrap;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        flex-wrap: wrap;
         width: 100%;
-        overflow-x: auto;
-        scrollbar-width: none;
-    }
-
-    .nav::-webkit-scrollbar {
-        display: none;
     }
 
     .nav a {
         font-size: 13px;
         margin: 0;
-        padding: 0;
-        line-height: 1;
+        padding: 4px 6px;
         white-space: nowrap;
-        flex-shrink: 0;
+        text-decoration: none;
+        line-height: 1.2;
     }
 
     hr {
