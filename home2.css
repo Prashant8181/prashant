@@ -189,7 +189,6 @@ select {
         object-position: center center;
     }
 }
-
 /* MOBILE */
 @media (max-width: 640px) {
     :root {
@@ -199,8 +198,8 @@ select {
     .navbar {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 6px;
-        padding: 8px var(--page-pad) 10px;
+        gap: 4px;
+        padding: 6px var(--page-pad) 8px;
     }
 
     .logo {
@@ -209,49 +208,23 @@ select {
     }
 
     .logo img {
-        width: 58px;
-        height: 58px;
+        width: 52px;
+        height: 52px;
     }
 
     .navbar ul {
         width: 100%;
         justify-content: center;
-        gap: clamp(12px, 4vw, 20px);
+        gap: clamp(10px, 3.5vw, 18px);
     }
 
     .navbar a {
-        font-size: 13px;
+        font-size: 12px;
     }
 
-    .marquee-box {
-        display: block;
-        position: fixed;
-        top: 112px;
-        left: 50%;
-        z-index: 999;
-        width: min(92vw, 420px);
-        overflow: hidden;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--green), #7d9458);
-        transform: translateX(-50%);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
+   
 
-    .marquee-track {
-        display: flex;
-        width: max-content;
-        animation: marqueeMove 12s linear infinite;
-    }
-
-    .marquee-track span {
-        padding: 7px 28px;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-        font-size: 11px;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-
+    
     .hero {
         min-height: 100svh;
     }
@@ -259,33 +232,44 @@ select {
     .bg-img {
         height: 100svh;
         object-fit: cover;
-        object-position: center center;
+        object-position: center 38%;
     }
 
     .content {
-        top: 72%;
+        top: 62%;
     }
 
     .btn {
-        min-height: 42px;
-        padding: 11px 24px;
+        min-height: 38px;
+        padding: 9px 20px;
         border-radius: 8px;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
 /* VERY SMALL PHONES */
 @media (max-width: 380px) {
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
     .navbar a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .navbar ul {
-        gap: 11px;
+        gap: 9px;
     }
 
+
     .content {
-        top: 74%;
+        top: 60%;
+    }
+
+    .btn {
+        font-size: 11px;
+        padding: 8px 18px;
     }
 }
 
