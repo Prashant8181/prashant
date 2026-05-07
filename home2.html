@@ -2,40 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Under Construction</title>
-<link rel="stylesheet" href="home2.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+
+    <link rel="stylesheet" href="home2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="marquee-box"> 
-        <marquee behavior="scroll" direction="left">
-             🚧 Work in progress.   
-          </marquee>
-
-    </div>
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="logo">
+    <div class="marquee-box" aria-label="Work in progress">
+        <div class="marquee-track">
+            <span>Work in progress.</span>
+            <span>Work in progress.</span>
+            <span>Work in progress.</span>
+        </div>
     </div>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <a class="logo" href="#" aria-label="Home">
+            <img src="logo.png" alt="Logo">
+        </a>
 
-<!-- HERO -->
-<section class="hero">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- FULL IMAGE -->
-    <img src="illustration.png" class="bg-img">
-</section>
-<script src="home2.js"></script>
+    <main>
+        <section class="hero">
+            <img src="illustration.png" class="bg-img" alt="Under construction illustration">
+
+            <div class="content">
+                <button class="btn" type="button">View Projects</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="home2.js"></script>
 </body>
 </html>
