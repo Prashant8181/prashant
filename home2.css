@@ -1,79 +1,104 @@
-/* ===================================================== */
-/* RESET */
-/* ===================================================== */
+:root {
+    --bg: #f5f3ef;
+    --red: #b23a3a;
+    --green: #5f7742;
+    --green-dark: #4e6535;
+    --max-width: 1200px;
+    --page-pad: clamp(16px, 5vw, 80px);
+    --nav-logo: clamp(58px, 11vw, 150px);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===================================================== */
-/* BODY */
-/* ===================================================== */
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Playfair Display', serif;
-    background: #f5f3ef;
+    width: 100%;
+    min-width: 320px;
+    min-height: 100svh;
+    font-family: "Playfair Display", serif;
+    background: var(--bg);
+    color: #222;
     overflow-x: hidden;
 }
 
-/* ===================================================== */
+img,
+video,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Use this class on future pages also */
+.container {
+    width: min(100% - calc(var(--page-pad) * 2), var(--max-width));
+    margin-inline: auto;
+}
+
 /* NAVBAR */
-/* ===================================================== */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0 0 auto 0;
+    z-index: 1000;
     width: 100%;
-    padding: 15px 80px;
+    padding: clamp(10px, 2vw, 15px) var(--page-pad);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+    align-items: flex-start;
+    gap: 20px;
     background: transparent;
 }
 
-/* ===================================================== */
-/* LOGO */
-/* ===================================================== */
 .logo {
-    transition: opacity 0.4s ease;
+    display: inline-flex;
+    flex: 0 0 auto;
+    transition: opacity 0.35s ease;
 }
 
 .logo img {
-    height: 150px;
-    width: auto;
-    margin-left: -40px;
-    transform: translateY(-20px);
-    display: block;
+    width: var(--nav-logo);
+    height: var(--nav-logo);
     object-fit: contain;
+    transform: translateY(-14%);
 }
 
 .logo.hide {
     opacity: 0;
+    pointer-events: none;
 }
 
-/* ===================================================== */
-/* NAV LINKS */
-/* ===================================================== */
 .navbar ul {
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(18px, 4vw, 40px);
     list-style: none;
-    position: relative;
-    top: -25px;
-}
-
-.navbar ul li {
-    list-style: none;
+    padding-top: clamp(12px, 3vw, 26px);
 }
 
 .navbar a {
     position: relative;
-    color: #b23a3a;
+    color: var(--red);
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: clamp(14px, 1.4vw, 18px);
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .navbar a::after {
@@ -81,196 +106,195 @@ body {
     position: absolute;
     left: 0;
     bottom: -5px;
-    width: 0%;
+    width: 0;
     height: 2px;
-    background: #5f7742;
-    transition: 0.3s;
+    background: var(--green);
+    transition: width 0.25s ease;
 }
 
 .navbar a:hover::after {
     width: 100%;
 }
 
-/* ===================================================== */
-/* HERO */
-/* ===================================================== */
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-/* ===================================================== */
-/* BACKGROUND IMAGE */
-/* ===================================================== */
-.bg-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ===================================================== */
-/* BUTTON */
-/* ===================================================== */
-.content {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 60;
-}
-
-.btn {
-    padding: 14px 34px;
-    background: #5f7742;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #4e6535;
-    transform: translateY(-2px);
-}
-
-/* ===================================================== */
-/* MARQUEE DESKTOP HIDE */
-/* ===================================================== */
+/* MARQUEE */
 .marquee-box {
     display: none;
 }
 
-/* ===================================================== */
-/* MOBILE VIEW ONLY */
-/* ===================================================== */
-@media (max-width: 768px) {
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+    background: var(--bg);
+}
 
-    /* ===== BODY ===== */
-    html, body {
-        width: 100%;
-        min-height: 100%;
-        overflow-x: hidden;
-        background: #f5f3ef;
-    }
+.bg-img {
+    width: 100%;
+    height: 100svh;
+    object-fit: cover;
+    object-position: center top;
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        padding-top: 0;
-    }
+.content {
+    position: absolute;
+    left: 50%;
+    top: clamp(60%, 70vh, 75%);
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    width: min(100% - 32px, 420px);
+    display: flex;
+    justify-content: center;
+}
 
-    /* ===== NAVBAR ===== */
+.btn {
+    min-height: 44px;
+    padding: 12px 28px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--green);
+    color: #fff;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(13px, 1.3vw, 15px);
+    font-weight: 600;
+    line-height: 1;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
     .navbar {
-        padding: 10px 14px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        background: transparent;
+        background: rgba(245, 243, 239, 0.72);
+        backdrop-filter: blur(12px);
     }
 
-    /* ===== LOGO ===== */
     .logo img {
-        height: 58px;
-        width: auto;
-        margin-left: 0;
-        transform: translateY(-6px);
-        object-fit: contain;
+        transform: none;
     }
 
-    /* ===== NAV LINKS ===== */
     .navbar ul {
-        display: flex;
-        gap: 14px;
-        top: 0;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        flex-wrap: nowrap;
+        padding-top: 0;
+        gap: clamp(14px, 3vw, 26px);
     }
 
-    .navbar ul li a {
-        font-size: 14px;
-        white-space: nowrap;
-        color: #b23a3a;
-        font-family: 'Playfair Display', serif;
-        font-weight: 600;
+    .bg-img {
+        object-position: center center;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+    :root {
+        --page-pad: 14px;
     }
 
-    /* ===== MOBILE ONLY MARQUEE ===== */
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px var(--page-pad) 10px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .navbar ul {
+        width: 100%;
+        justify-content: center;
+        gap: clamp(12px, 4vw, 20px);
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
     .marquee-box {
         display: block;
-        position: absolute;
-        top: 78px;
+        position: fixed;
+        top: 112px;
         left: 50%;
-        transform: translateX(-50%);
-        width: 94%;
         z-index: 999;
-        text-align: center;
+        width: min(92vw, 420px);
+        overflow: hidden;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--green), #7d9458);
+        transform: translateX(-50%);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
-    marquee {
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marqueeMove 12s linear infinite;
+    }
+
+    .marquee-track span {
+        padding: 7px 28px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
         font-size: 11px;
         font-weight: 600;
-        color: white;
-        background: linear-gradient(90deg, #5f7742, #7d9458);
-        padding: 7px 12px;
-        border-radius: 25px;
-        letter-spacing: 0.6px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        white-space: nowrap;
     }
 
-    /* ===== HERO ===== */
     .hero {
-        width: 100%;
-        height: 100vh;
-        min-height: 100vh;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        min-height: 100svh;
     }
 
-    /* ===== BG IMAGE FIX ===== */
     .bg-img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;          /* full image visible */
-        object-position: top center;  /* image top align */
-        display: block;
-        margin-top: -45px;            /* slight upward */
+        height: 100svh;
+        object-fit: cover;
+        object-position: center center;
     }
 
-    /* ===== BUTTON POSITION ===== */
     .content {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
+        top: 72%;
     }
 
-    /* ===== BUTTON ===== */
     .btn {
-        padding: 10px 22px;
+        min-height: 42px;
+        padding: 11px 24px;
+        border-radius: 8px;
+        font-size: 13px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 380px) {
+    .navbar a {
         font-size: 12px;
-        border-radius: 10px;
-        background: #5f7742;
-        color: white;
-        font-weight: 600;
     }
 
-    .btn:hover {
-        background: #4e6535;
+    .navbar ul {
+        gap: 11px;
+    }
+
+    .content {
+        top: 74%;
+    }
+}
+
+@keyframes marqueeMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-33.333%);
     }
 }
