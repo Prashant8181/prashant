@@ -34,7 +34,9 @@
 </section>
 
 <!-- HIDDEN AUTOPLAY BACKGROUND MUSIC -->
-<audio id="bgMusic" autoplay muted loop style="display:none;">
+<!-- AUTO PLAY BACKGROUND MUSIC -->
+<audio id="bgMusic" autoplay muted loop controls
+       style="position:fixed; bottom:20px; left:20px; z-index:9999;">
     <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
 </audio>
 
@@ -42,25 +44,18 @@
 window.addEventListener("load", function () {
     const music = document.getElementById("bgMusic");
 
-    // Try autoplay immediately
-    music.play().catch(() => {
-        console.log("Autoplay started muted only.");
+    // Start automatically (muted autoplay is browser-safe)
+    music.play().then(() => {
+        console.log("Autoplay started");
+    }).catch(() => {
+        console.log("Autoplay blocked");
     });
 
-    // Optional: first user interaction unmutes
-    function unmuteMusic() {
+    // First click anywhere = unmute
+    document.addEventListener("click", function () {
         music.muted = false;
         music.volume = 1;
-        music.play();
-
-        window.removeEventListener("click", unmuteMusic);
-        window.removeEventListener("scroll", unmuteMusic);
-        window.removeEventListener("touchstart", unmuteMusic);
-    }
-
-    window.addEventListener("click", unmuteMusic);
-    window.addEventListener("scroll", unmuteMusic);
-    window.addEventListener("touchstart", unmuteMusic);
+    }, { once: true });
 });
 </script>
 <!-- 🌊 CURVE -->
