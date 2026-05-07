@@ -37,3 +37,37 @@ window.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("scroll", startMusic, { once: true });
     document.addEventListener("touchstart", startMusic, { once: true });
 });
+
+// PASTE THIS AT THE BOTTOM OF home2.js
+
+window.addEventListener("load", function () {
+    const music = document.getElementById("bgMusic");
+
+    if (!music) {
+        console.log("Audio element not found");
+        return;
+    }
+
+    function startMusic() {
+        music.volume = 1;
+        music.muted = false;
+
+        music.play()
+            .then(() => {
+                console.log("Music started successfully");
+            })
+            .catch((error) => {
+                console.log("Playback blocked:", error);
+            });
+
+        // Remove after first interaction
+        window.removeEventListener("click", startMusic);
+        window.removeEventListener("scroll", startMusic);
+        window.removeEventListener("touchstart", startMusic);
+    }
+
+    // First user interaction triggers music
+    window.addEventListener("click", startMusic);
+    window.addEventListener("scroll", startMusic);
+    window.addEventListener("touchstart", startMusic);
+});
