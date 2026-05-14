@@ -33,63 +33,64 @@
       display: block;
       height: auto;
     }
+/* 🔥 BIGGER + LOWER RIGHT FIXED WHATSAPP BUTTON */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 35px;          /* More downward */
+    right: 20px;           /* Right side aligned */
+    width: 80px;           /* Bigger size */
+    height: 80px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 48px;       /* Bigger icon */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.whatsapp-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+}
+
+.whatsapp-btn::after {
+    content: "Chat With Us";
+    position: absolute;
+    right: 95px;
+    background: #111;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.whatsapp-btn:hover::after {
+    opacity: 1;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
     .whatsapp-btn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      width: 65px;
-      height: 65px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 34px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      z-index: 999;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.12);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+        width: 70px;
+        height: 70px;
+        font-size: 42px;
+        bottom: 20px;
+        right: 15px;
     }
 
     .whatsapp-btn::after {
-      content: "Chat With Us";
-      position: absolute;
-      right: 78px;
-      background: #111;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .whatsapp-btn:hover::after {
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .whatsapp-btn {
-        width: 58px;
-        height: 58px;
-        font-size: 30px;
-        bottom: 18px;
-        right: 18px;
-      }
-
-      .whatsapp-btn::after {
         display: none;
-      }
     }
+}
   </style>
 </head>
 <body>
