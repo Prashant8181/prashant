@@ -1,97 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
-
-<link rel="stylesheet" href="index.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Inter:wght@300&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<!-- 🔥 TOP SECTION -->
-<section class="top-section">
-    <div class="container">
-        <div class="top-text">a personal space</div>
-
-        <div class="quote">
-            "The world is a book, and those who do not travel read only one page."
-        </div>
-
-        <div class="line">
-            code, work, and the places in between.
-        </div>
-
-       <a href="#projects">
-    <button class="project-btn">View Projects</button>
-</a>
-
-        <div class="coming">coming soon.</div>
-    </div>
-</section>
-
-<!-- HIDDEN AUTOPLAY BACKGROUND MUSIC -->
-<!-- MOBILE + LAPTOP HIDDEN BACKGROUND MUSIC -->
-<!-- <audio id="bgMusic" autoplay muted loop playsinline style="display:none;">
-    <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-window.addEventListener("load", function () {
-    const music = document.getElementById("bgMusic");
-
-    // Silent autoplay on page load
-    music.play().catch(() => {
-        console.log("Autoplay blocked until interaction");
-    });
-
-    // First tap/click anywhere = unmute + real playback
-    function activateMusic() {
-        music.muted = false;
-        music.volume = 1;
-
-        music.play().catch(err => {
-            console.log("Playback issue:", err);
-        });
-
-        document.removeEventListener("click", activateMusic);
-        document.removeEventListener("touchstart", activateMusic);
-        document.removeEventListener("scroll", activateMusic);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advika Boys PG</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    document.addEventListener("click", activateMusic, { once: true });
-    document.addEventListener("touchstart", activateMusic, { once: true });
-    document.addEventListener("scroll", activateMusic, { once: true });
-});
-</script> -->
-<!-- 🌊 CURVE -->
-<div class="curve"></div>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
 
-<!-- ⚪ PROJECT SECTION -->
-<section class="projects-section" id="projects">
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+      background: white;
+    }
 
-    <h2>Projects Portfolio</h2>
+    .poster {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
 
-    <div class="projects">
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 65px;
+      height: 65px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 34px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      z-index: 999;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        <div class="project-card">
-            <img src="moryagaragepic.jpeg" alt="Dashboard Project">
-            <h3>GARAGE MANAGEMENT</h3>
-            <a href="home.html"><button>View Project</button></a>
-        </div>
+    .whatsapp-btn:hover {
+      transform: scale(1.12);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
 
-        <div class="project-card">
-            <img src="Alinexpic.jpeg" alt="Ecommerce Project">
-            <h3>ARCHITECTURE STUDENT</h3>
-           <a href="home2.html"> <button>View Project</button></a>
-        </div>
+    .whatsapp-btn::after {
+      content: "Chat With Us";
+      position: absolute;
+      right: 78px;
+      background: #111;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
 
-    </div>
+    .whatsapp-btn:hover::after {
+      opacity: 1;
+    }
 
-</section>
+    @media (max-width: 768px) {
+      .whatsapp-btn {
+        width: 58px;
+        height: 58px;
+        font-size: 30px;
+        bottom: 18px;
+        right: 18px;
+      }
 
+      .whatsapp-btn::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="advikapg" alt="Advika Boys PG Poster" class="poster">
+  </div>
+
+  <!-- Replace 919325447129 with your WhatsApp number -->
+  <a 
+    href="https://wa.me/919325447129?text=Hi%20Advika%20Boys%20PG,%20I%E2%80%99m%20interested%20in%20your%20PG%20services.%20Please%20share%20full%20details.%22
+    class="whatsapp-btn"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
