@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuvraj Shinde Portfolio</title>
-    <link rel="stylesheet" href="home2.css">
+<meta charset="UTF-8">
+<title>Yuvraj Shinde</title>
+
+<link rel="stylesheet" href="home2.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>Yuvraj Shinde</h1>
-        <h3>Architecture Student | Designer</h3>
-    </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+     <img src="logo.png" alt="logo">
+    </div>  
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="INTERNSHIP PORTFOLIO.pdf" target="_blank">Portfolio</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>
-            Welcome to my Architecture Portfolio.
-            Explore my academic and professional projects,
-            architectural designs, working drawings and
-            visualization work.
-        </p>
-    </section>
+    <!-- HIDDEN BACKGROUND MUSIC -->
+<!-- <audio id="bgMusic" preload="auto" loop>
+    <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
+</audio> -->
+    <!-- PLACE THIS JUST BEFORE </body> -->
 
-    <section id="about">
-        <h2>About Me</h2>
+<!-- <audio id="bgMusic" loop controls style="position:fixed; bottom:20px; left:20px; z-index:9999;">
+    <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
+</audio>
 
-        <p>
-            I am Yuvraj Shinde, a fourth-year Architecture student
-            interested in contemporary, minimalist and parametric architecture.
-            I enjoy exploring spatial experiences, materials and modern
-            design approaches through creativity and experimentation.
-        </p>
+<script>
+window.onload = function () {
+    const music = document.getElementById("bgMusic");
 
-        <a class="btn" href="INTERNSHIP PORTFOLIO.pdf" target="_blank">
-            View Full Portfolio
-        </a>
-    </section>
+    // TEST if file loads
+    music.load();
 
-    <section id="projects">
-        <h2>Projects</h2>
+    function startMusic() {
+        music.play()
+            .then(() => console.log("Playing"))
+            .catch(err => console.log("Error:", err));
+    }
 
-        <ul>
-            <li>Farm House Project</li>
-            <li>KRE-BIC Campus Project</li>
-            <li>Group Housing Project</li>
-            <li>Executed Residential Projects</li>
-            <li>Working Drawings</li>
-            <li>Miscellaneous Works</li>
-        </ul>
+    document.body.addEventListener("click", startMusic, { once: true });
+};
+</script> -->
 
-        <a class="btn" href="INTERNSHIP PORTFOLIO.pdf" target="_blank">
-            Open Portfolio PDF
-        </a>
-    </section>
+<!-- HERO -->
+<section class="hero">
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <!-- FULL IMAGE -->
+    <img src="illustration.png" class="bg-img">
 
-        <p><strong>Email:</strong> shindeyuvi04@gmail.com</p>
-        <p><strong>Phone:</strong> +91 9145444333</p>
-        <p><strong>Location:</strong> Pune, Maharashtra</p>
-    </section>
-
-    <footer>
-        <p>© 2026 Yuvraj Shinde | Architecture Portfolio</p>
-    </footer>
-
+    <!-- BUTTON -->
+    <!-- <div class="content">
+        <button class="btn">View Projects</button>
+    </div> -->
+</section>
+<script src="home2.js"></script>
 </body>
 </html>
