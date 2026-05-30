@@ -104,6 +104,35 @@ body {
     cursor: pointer;
 }
 
+/* for logo */
+
+.logo-container{
+    display:flex;
+    align-items:flex-end;
+    gap:30px;
+}
+
+.logo-left h1{
+    font-size:90px;
+    font-weight:900;
+    line-height:0.9;
+    color:#111;
+}
+
+.logo-right{
+    padding-bottom:10px;
+}
+
+.logo-right p{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#777;
+}
+
+.logo-right h3{
+    font-size:18px;
+    font-weight:600;
+    color:#8B0000;
 @media (max-width: 768px) {
     .btn {
         position: relative;
