@@ -97,3 +97,42 @@ body{
     letter-spacing:2px;
     text-shadow:0 4px 20px rgba(0,0,0,0.4);
 }
+
+/* MOBILE VIEW */
+@media screen and (max-width:768px){
+
+    /* Smaller logo */
+    .logo img{
+        height:80px;
+    }
+
+    /* Smaller navbar spacing */
+    .navbar{
+        padding:10px 20px;
+    }
+
+    .navbar ul{
+        gap:15px;
+    }
+
+    .navbar ul li a{
+        font-size:14px;
+    }
+
+    /* Smaller title */
+    .brand h1{
+        font-size:35px;
+    }
+
+    /* Smaller subtitle */
+    .brand p{
+        font-size:12px;
+        text-align:center;
+    }
+
+    /* Fix image position */
+    .bg-img{
+        object-position:center center;
+    }
+
+}
