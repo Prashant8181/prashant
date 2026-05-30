@@ -1,112 +1,66 @@
-/* RESET */
-* {
+body{
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-/* BODY */
-body {
-    font-family: 'Playfair Display', serif;
+h1,h2,h3{
+    text-align: center;
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 80px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-  /*  background: url('navbar.png');  🔥 add this */
-    background-size: cover;
-
-    z-index: 1000;
+h1{
+    margin-top: 20px;
+    color: #333;
 }
 
-
-.logo img {
-    height: 150px;
-    margin-left: -30px;
+h3{
+    color: #666;
 }
 
-.logo {
-    transition: opacity 0.4s ease;
+nav{
+    text-align: center;
+    background: #333;
+    padding: 15px;
 }
 
-.logo.hide {
-    opacity: 0;
-} 
-/* NAV LINKS */
-.navbar ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-
-    position: relative;
-    top: -25px;
-}
-
-.navbar a {
-    position: relative;
-    color: #b23a3a;
+nav a{
+    color: white;
     text-decoration: none;
-    transition: 0.3s;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-
-    width: 0%;
-    height: 2px;
-    background: #5f7742;
-
-    transition: 0.3s;
+nav a:hover{
+    color: #ffcc00;
 }
 
-.navbar a:hover::after {
-    width: 100%;
+section{
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* HERO */
-.hero {
-    width: 100%;
-}
-/* IMAGE (MAIN FIX) */
-.bg-img {
-    width: 100%;      /* FULL WIDTH */
-    height: auto;     /* KEEP ORIGINAL RATIO */
-
-    display: block;
+ul{
+    padding-left: 20px;
 }
 
-/* BUTTON CENTER */
-.content {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+a{
+    color: #0077cc;
 }
 
-/* BUTTON */
-.btn {
-    padding: 14px 34px;
-    background: #5f7742;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+a:hover{
+    color: #005599;
 }
 
-@media (max-width: 768px) {
-    .btn {
-        position: relative;
-        top: -70px;
-    }
+hr{
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+#contact p{
+    margin: 5px 0;
 }
