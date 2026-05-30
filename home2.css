@@ -1,58 +1,112 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    text-align:center;
-    padding:30px;
-    background:#222;
-    color:white;
+/* BODY */
+body {
+    font-family: 'Playfair Display', serif;
 }
 
-nav{
-    background:#333;
-    text-align:center;
-    padding:15px;
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  /*  background: url('navbar.png');  🔥 add this */
+    background-size: cover;
+
+    z-index: 1000;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+
+.logo img {
+    height: 150px;
+    margin-left: -30px;
 }
 
-nav a:hover{
-    color:#ffd700;
+.logo {
+    transition: opacity 0.4s ease;
 }
 
-section{
-    max-width:900px;
-    margin:20px auto;
-    background:white;
-    padding:25px;
-    border-radius:8px;
+.logo.hide {
+    opacity: 0;
+} 
+/* NAV LINKS */
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+
+    position: relative;
+    top: -25px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:10px 20px;
-    background:#333;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
+.navbar a {
+    position: relative;
+    color: #b23a3a;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.btn:hover{
-    background:#555;
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+    background: #5f7742;
+
+    transition: 0.3s;
 }
 
-footer{
-    text-align:center;
-    padding:15px;
-    background:#222;
-    color:white;
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    width: 100%;
+}
+/* IMAGE (MAIN FIX) */
+.bg-img {
+    width: 100%;      /* FULL WIDTH */
+    height: auto;     /* KEEP ORIGINAL RATIO */
+
+    display: block;
+}
+
+/* BUTTON CENTER */
+.content {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* BUTTON */
+.btn {
+    padding: 14px 34px;
+    background: #5f7742;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        position: relative;
+        top: -70px;
+    }
 }
