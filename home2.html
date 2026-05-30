@@ -1,72 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Yuvraj Shinde</title>
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
 
-<link rel="stylesheet" href="home2.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">
-     <img src="logo.png" alt="logo">
-    </div>  
+    <iframe src="INTERNSHIP PORTFOLIO.pdf"></iframe>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-    <!-- HIDDEN BACKGROUND MUSIC -->
-<!-- <audio id="bgMusic" preload="auto" loop>
-    <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
-</audio> -->
-    <!-- PLACE THIS JUST BEFORE </body> -->
-
-<!-- <audio id="bgMusic" loop controls style="position:fixed; bottom:20px; left:20px; z-index:9999;">
-    <source src="https://cdn.jsdelivr.net/gh/Prashant8181/prashant@main/you-and-me.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-window.onload = function () {
-    const music = document.getElementById("bgMusic");
-
-    // TEST if file loads
-    music.load();
-
-    function startMusic() {
-        music.play()
-            .then(() => console.log("Playing"))
-            .catch(err => console.log("Error:", err));
-    }
-
-    document.body.addEventListener("click", startMusic, { once: true });
-};
-</script> -->
-
-<!-- HERO -->
-<section class="hero">
-
-    <!-- FULL IMAGE -->
-    <img src="illustration.png" class="bg-img">
-
-    <!-- BUTTON -->
-    <!-- <div class="content">
-        <button class="btn">View Projects</button>
-    </div> -->
-</section>
-    <!-- PAGE 2 -->
-    <section class="hero second-page" id="page2">
-    <img src="illustration2(1).png" class="bg-img" alt="Page 2">
-</section>
-    
-<script src="home2.js"></script>
 </body>
 </html>
