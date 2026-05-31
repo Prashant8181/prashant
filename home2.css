@@ -158,10 +158,12 @@ body{
 /* for maruqee */
 .marquee{
     position:absolute;
-    bottom:40px;
+    top:150px;
     width:100%;
     overflow:hidden;
     white-space:nowrap;
+    color:white;
+    /* color:#d4af37; */
 }
 
 .marquee span{
