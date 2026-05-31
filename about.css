@@ -223,3 +223,122 @@ body{
 
     background:#ccc;
 }
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media screen and (max-width:768px){
+
+    .about-container{
+        flex-direction:column;
+        padding:40px 20px;
+        overflow:hidden;
+    }
+
+    /* LEFT SECTION */
+
+    .about-image{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        margin-bottom:40px;
+    }
+
+    .green-box{
+        width:140px;
+        height:220px;
+
+        top:-20px;
+        left:20px;
+    }
+
+    .about-image img{
+        width:280px;
+        max-width:100%;
+    }
+
+    .vertical-text{
+        left:-5px;
+        top:120px;
+
+        font-size:10px;
+        letter-spacing:3px;
+    }
+
+    /* RIGHT SECTION */
+
+    .about-content{
+        width:100%;
+        text-align:left;
+    }
+
+    .hello{
+        gap:10px;
+    }
+
+    .line{
+        width:100px;
+    }
+
+    .about-content h1{
+        font-size:52px;
+        line-height:1;
+    }
+
+    .about-content h2{
+        font-size:52px;
+        line-height:1;
+        margin-top:-5px;
+    }
+
+    .about-content h3{
+        font-size:26px;
+        letter-spacing:1px;
+    }
+
+    .about-content h4{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .tagline{
+        font-size:28px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    /* BUILDING SKETCH */
+
+    .building-sketch{
+        width:100%;
+        right:0;
+        top:250px;
+        opacity:0.08;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+        margin:20px;
+        padding:25px;
+    }
+
+    .contact-box h2{
+        font-size:22px;
+    }
+
+    .contact-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .divider{
+        display:none;
+    }
+}
