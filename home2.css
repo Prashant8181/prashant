@@ -112,7 +112,7 @@ body{
 @media screen and (max-width:768px){
 
     .logo img{
-    margin-left:-15px;
+    transform:translateX(-15px);
 }
     
     .menu-toggle{
