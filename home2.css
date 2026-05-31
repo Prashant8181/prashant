@@ -111,6 +111,10 @@ body{
 /* Mobile */
 @media screen and (max-width:768px){
 
+    .logo img{
+    margin-left:-15px;
+}
+    
     .menu-toggle{
         display:block;
     }
