@@ -114,22 +114,31 @@ body{
     }
 
     .navbar ul{
-        display:none;
-        flex-direction:column;
+    display:none;
+    flex-direction:column;
 
-        position:absolute;
-        top:90px;
-        right:20px;
+    position:absolute;
 
-        background:white;
+    top:100%;
+    right:0;
 
-        padding:15px;
+    margin-top:10px;
 
-        border-radius:10px;
+    background:white;
 
-        box-shadow:0 5px 20px rgba(0,0,0,0.2);
-    }
+    padding:15px 20px;
 
+    border-radius:10px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+    min-width:180px;
+}
+
+    .menu-toggle{
+    display:block;
+    position:relative;
+}
     .navbar ul.active{
         display:flex;
     }
