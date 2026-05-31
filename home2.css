@@ -25,7 +25,9 @@ body{
 
     z-index:1000;
 }
-
+.mobile-menu{
+    position:relative;
+}
 /* LOGO */
 .logo img{
     height:150px;
