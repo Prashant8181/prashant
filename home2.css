@@ -111,8 +111,8 @@ body{
 /* Mobile */
 @media screen and (max-width:768px){
 
-    .logo img{
-    transform:translateX(-15px);
+   .logo img{
+    margin-left:-20px;
 }
     
     .menu-toggle{
