@@ -112,7 +112,7 @@ body{
 @media screen and (max-width:768px){
 
    .logo img{
-    margin-left:-50px;
+    margin-left:-30px;
 }
     
     .menu-toggle{
@@ -183,6 +183,35 @@ body{
 
     animation:scroll 20s linear infinite;
 }
+
+.portfolio-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 28px;
+    border:none;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    position:relative;
+    top:100px;
+}
+
+/* .portfolio-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    border-radius:50px;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+    top:30px;
+} */
 
 @keyframes scroll{
     from{
