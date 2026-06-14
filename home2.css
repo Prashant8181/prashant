@@ -1,26 +1,31 @@
-.site-announcement {
+.ticker {
     background: #111827;
     border-top: 2px solid #c9a86a;
     border-bottom: 2px solid #c9a86a;
-    padding: 14px 0;
     overflow: hidden;
+    white-space: nowrap;
 }
 
-.site-announcement__link {
-    display: inline-block;   /* KEY FIX */
+.ticker a {
+    display: inline-block;
+    padding: 14px 0;
     color: #f8f9fa;
     text-decoration: none;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    white-space: nowrap;
-    cursor: pointer;        /* KEY FIX */
+
+    padding-left: 100%;
+    animation: scroll 18s linear infinite;
 }
 
-.site-announcement__link:hover {
+.ticker a:hover {
     color: #c9a86a;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 *{
     margin:0;
