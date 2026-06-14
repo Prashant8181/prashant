@@ -1,4 +1,24 @@
-/* RESET */
+
+
+marquee {
+    background: #111827;
+    border-top: 2px solid #c9a86a;
+    border-bottom: 2px solid #c9a86a;
+    padding: 14px 0;
+}
+
+marquee a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+}
+
+marquee a:hover {
+    color: #c9a86a;
+}/* RESET */
 *{
     margin:0;
     padding:0;
