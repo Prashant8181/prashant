@@ -1,12 +1,11 @@
 
-
 .site-announcement {
     background: #111827;
     border-top: 2px solid #c9a86a;
     border-bottom: 2px solid #c9a86a;
     padding: 14px 0;
     margin: 0;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .site-announcement__link {
@@ -17,7 +16,7 @@
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .site-announcement__link:hover {
