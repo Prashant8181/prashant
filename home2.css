@@ -1,14 +1,13 @@
-
 .site-announcement {
     background: #111827;
     border-top: 2px solid #c9a86a;
     border-bottom: 2px solid #c9a86a;
     padding: 14px 0;
-    margin: 0;
     overflow: hidden;
 }
 
 .site-announcement__link {
+    display: inline-block;   /* KEY FIX */
     color: #f8f9fa;
     text-decoration: none;
     font-family: "Montserrat", Arial, sans-serif;
@@ -17,6 +16,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     white-space: nowrap;
+    cursor: pointer;        /* KEY FIX */
 }
 
 .site-announcement__link:hover {
