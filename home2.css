@@ -1,24 +1,28 @@
 
 
-marquee {
+.site-announcement {
     background: #111827;
     border-top: 2px solid #c9a86a;
     border-bottom: 2px solid #c9a86a;
     padding: 14px 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-marquee a {
+.site-announcement__link {
     color: #f8f9fa;
     text-decoration: none;
+    font-family: "Montserrat", Arial, sans-serif;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
-    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-marquee a:hover {
+.site-announcement__link:hover {
     color: #c9a86a;
-}/* RESET */
+}
 *{
     margin:0;
     padding:0;
