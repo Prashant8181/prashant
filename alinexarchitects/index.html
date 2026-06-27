@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alinex Architects</title>
+
+<link rel="stylesheet" href="home2.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="ticker">
+    <a href="https://alinexarchitects.in" target="_blank" rel="noopener noreferrer">
+        🌐 VISIT ALINEX ARCHITECTS • Architecture • Interior Design • Planning • alinexarchitects.in
+    </a>
+</div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="logo2.png" alt="logo">
+        </div>
+<div class="mobile-menu">
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <ul id="nav-links">
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="PORTFOLIO.pdf" target="_blank">Portfolio</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+    </ul>
+
+</div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+   <section class="hero">
+
+    <!-- <div class="marquee">
+        <span>🚧 Site Under Construction,
+        Don't worry — we are more consistent than your motivation.
+        Stay tuned. Something amazing is being built.</span>
+    </div> -->
+
+    <img src="pic5.jpeg" alt="Architecture" class="bg-img">
+
+    <div class="hero-title">
+        <div class="brand">
+
+            <h1>ALINEX ARCHITECTS</h1>
+            <p>Where Dreams Take Shape</p>
+
+            <a href="PORTFOLIO.pdf" class="portfolio-btn">
+                View Portfolio
+            </a>
+
+        </div>
+    </div>
+
+</section>
+     <script>
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
