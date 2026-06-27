@@ -1,1 +1,345 @@
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f8f8f8;
+    font-family:'Outfit',sans-serif;
+}
+
+.about-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:80px;
+
+    position:relative;
+}
+
+/* LEFT */
+
+.about-image{
+
+    width:40%;
+
+    position:relative;
+}
+
+.green-box{
+
+    position:absolute;
+
+    width:220px;
+    height:320px;
+
+    background:#7d7b53;
+
+    top:-40px;
+    left:-40px;
+
+    z-index:1;
+}
+
+.about-image img{
+
+    width:420px;
+
+    border:2px solid #6a1f1f;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.vertical-text{
+
+    position:absolute;
+
+    left:-60px;
+    top:250px;
+
+    writing-mode:vertical-rl;
+
+    transform:rotate(180deg);
+
+    letter-spacing:6px;
+
+    color:#333;
+}
+
+/* RIGHT */
+
+.about-content{
+
+    width:55%;
+
+    position:relative;
+}
+
+.hello{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.line{
+
+    width:250px;
+
+    height:2px;
+
+    background:#7d7b53;
+}
+
+.hello span{
+
+    color:#7d7b53;
+
+    letter-spacing:3px;
+}
+
+.about-content h1{
+
+    font-size:90px;
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:400;
+}
+
+.about-content h2{
+
+    font-size:90px;
+
+    color:#7d7b53;
+
+    font-family:'Playfair Display',serif;
+
+    font-weight:400;
+
+    margin-top:-20px;
+}
+
+.about-content h3{
+
+    margin-top:20px;
+
+    color:#6a1f1f;
+
+    font-size:40px;
+
+    letter-spacing:3px;
+}
+
+.about-content h4{
+
+    color:#666;
+
+    letter-spacing:4px;
+
+    margin-top:10px;
+}
+
+.tagline{
+
+    margin-top:25px;
+
+    font-size:42px;
+
+    color:#7d7b53;
+
+    font-family:cursive;
+}
+
+.about-content p{
+
+    margin-top:25px;
+
+    max-width:650px;
+
+    line-height:1.9;
+
+    color:#444;
+}
+
+.building-sketch{
+
+    position:absolute;
+
+    right:0;
+
+    top:100px;
+
+    width:550px;
+
+    opacity:0.12;
+
+    z-index:-1;
+}
+
+/* CONTACT */
+
+.contact-box{
+
+    margin:40px 80px 80px;
+
+    padding:40px;
+
+    background:#efefef;
+
+    border-radius:10px;
+}
+
+.contact-box h2{
+
+    color:#666;
+
+    margin-bottom:20px;
+}
+
+.contact-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:50px;
+}
+
+.divider{
+
+    width:1px;
+
+    height:60px;
+
+    background:#ccc;
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media screen and (max-width:768px){
+
+    .about-container{
+        flex-direction:column;
+        padding:40px 20px;
+        overflow:hidden;
+    }
+
+    /* LEFT SECTION */
+
+    .about-image{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        margin-bottom:40px;
+    }
+
+    .green-box{
+        width:140px;
+        height:220px;
+
+        top:-20px;
+        left:20px;
+    }
+
+    .about-image img{
+        width:280px;
+        max-width:100%;
+    }
+
+    .vertical-text{
+        left:-5px;
+        top:120px;
+
+        font-size:10px;
+        letter-spacing:3px;
+    }
+
+    /* RIGHT SECTION */
+
+    .about-content{
+        width:100%;
+        text-align:left;
+    }
+
+    .hello{
+        gap:10px;
+    }
+
+    .line{
+        width:100px;
+    }
+
+    .about-content h1{
+        font-size:52px;
+        line-height:1;
+    }
+
+    .about-content h2{
+        font-size:52px;
+        line-height:1;
+        margin-top:-5px;
+    }
+
+    .about-content h3{
+        font-size:26px;
+        letter-spacing:1px;
+    }
+
+    .about-content h4{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .tagline{
+        font-size:28px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    /* BUILDING SKETCH */
+
+    .building-sketch{
+        width:100%;
+        right:0;
+        top:250px;
+        opacity:0.08;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+        margin:20px;
+        padding:25px;
+    }
+
+    .contact-box h2{
+        font-size:22px;
+    }
+
+    .contact-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .divider{
+        display:none;
+    }
+}
