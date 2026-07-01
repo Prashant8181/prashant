@@ -1,1 +1,383 @@
 
+/* ===== GLOBAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    padding-top: 120px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* ===== LOGO ===== */
+.logo img {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== TITLE ===== */
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    flex: 1;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.title p {
+    margin-top: 5px;
+    margin-bottom: 8px;   /* 🔥 clean gap before navbar */
+    font-size: 13px;
+    color: gray;
+}
+
+/* ===== MARQUEE ===== */
+marquee {
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-right: 40px;   /* 🔥 balanced right spacing */
+    gap: 22px;     
+    margin-top: 8px;   
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.nav a:hover {
+    color: #1e3c72;
+    transition: 0.3s;
+}
+
+/* ===== HR LINE ===== */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 5px 40px;
+}
+
+marquee {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;   /* 🔥 modern premium font */
+    font-size: 16px;                                  /* clean readable */
+    font-weight: 600;                                 /* bold but classy */
+    color: #ffffff;                                   /* white text */
+    
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* 🔥 premium blue gradient */
+    
+    padding: 12px 0;                                  /* height */
+    border-radius: 8px;                               /* smooth corners */
+    
+    letter-spacing: 0.8px;                            /* stylish spacing */
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);         /* soft shadow */
+    
+    margin-top: 10px;
+    width: 100%;
+    
+    border-top: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+
+/* ===== SUMMARY CARDS ===== */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 220px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue { background: #dcecff; }
+.green { background: #d8f5e3; }
+.orange { background: #ffe7d6; }
+.purple { background: #e4ddff; }
+
+/* ===== BUTTONS ===== */
+.buttons {
+    text-align: center;
+    margin: 20px;
+}
+
+.buttons button {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 25px 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== NOTICE SECTION ===== */
+.notice-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+/* LEFT SIDE */
+.notice-display {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-display h3 {
+    margin-top: 0;
+}
+
+.notice-display ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notice-display li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* RIGHT SIDE INPUT */
+.notice-input {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+.notice-input textarea {
+    width: 100%;
+    height: 80px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.save {
+    background: #1e3c72;
+    color: white;
+}
+
+.clear {
+    background: #d9534f;
+    color: white;
+}
+
+.btn-group button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 210px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    /* LOGO + TITLE */
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    /* TITLE */
+    .title {
+        text-align: left;
+        flex: 1;
+        margin-left: 0;
+        position: static;
+        transform: none;
+    }
+
+    .title h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        margin: 0;
+        position: relative;
+        left: -6px;
+    }
+
+    .title p {
+        font-size: 11px;
+        margin-top: 3px;
+        margin-bottom: 4px;
+        position: relative;
+        left: -6px;
+    }
+
+    marquee {
+        font-size: 11px;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    /* 🔥 MOBILE NAVBAR CLEAN FIX */
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 8px;      /* 🔥 navbar original place */
+        flex-wrap: nowrap;
+    }
+
+    .nav a {
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 2px;           /* 🔥 only links slightly lower */
+    }
+
+    /* CARDS */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 95%;
+    }
+
+    /* BUTTONS */
+    .buttons button {
+        width: 95%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+      marquee {
+        font-size: 13px;
+        padding: 10px 0;
+        letter-spacing: 0.5px;
+        border-radius: 6px;
+    }
+    /* NOTICE */
+    .notice-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
