@@ -518,5 +518,5 @@ function printBill() {
     };
 
     localStorage.setItem("billData", JSON.stringify(data));
-    window.open("receipt.html", "_blank");
+    window.open("./Receipt", "_blank");
 }
