@@ -16,7 +16,7 @@ h1 {
 .logo img {
     width: 100px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 30%;
     object-fit: cover;
 }
 
