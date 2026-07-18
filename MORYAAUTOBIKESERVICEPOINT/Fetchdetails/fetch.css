@@ -369,168 +369,268 @@ td, th {
 }
 
 /* ========================================================= */
-/* ===== MOBILE VIEW FOR FETCH PAGE (FIRST PAGE STYLE) ===== */
+/* ================= MOBILE PORTRAIT VIEW ================== */
 /* ========================================================= */
-@media (max-width: 768px) {
+@media screen and (max-width:768px){
 
-    body {
-        margin: 0;
-        overflow-x: hidden;
-        background: #f4f6f9;
+    body{
+        overflow-x:hidden;
+        background:#f4f6f9;
     }
 
-    /* ===== HEADER ===== */
-    .header {
-        padding: 8px 10px 4px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: sticky;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 1000;
-        border-bottom: 1px solid #ccc;
+    /* ================= HEADER ================= */
+
+    .header{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding:10px;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1000;
+        background:#fff;
+        box-sizing:border-box;
     }
 
-    /* ===== LOGO ===== */
-    .logo img {
-        width: 50px;
-        height: auto;
-        object-fit: contain;
+    .logo img{
+        width:65px;
+        height:65px;
     }
 
-    /* ===== TITLE ===== */
-    .title {
-        text-align: center;
-        flex: 1;
-        margin-left: 0;
-        position: static;
-        transform: none;
-        width: 100%;
+    .title{
+        width:100%;
+        text-align:center;
+        margin-top:5px;
     }
 
-    .title h1 {
-        font-size: 18px;
-        white-space: normal;
-        letter-spacing: 1px;
-        margin: 0;
-        padding-right: 0;
-        line-height: 1.1;
+    .title h1{
+        font-size:18px;
+        margin:5px 0;
+        line-height:1.3;
     }
 
-    .title p {
-        font-size: 11px;
-        margin-top: 3px;
-        margin-bottom: 1px;
-        white-space: normal;
-        padding-right: 0;
-        line-height: 1.1;
+    .title p{
+        font-size:12px;
+        margin:0;
     }
 
-    /* ===== NAVBAR ===== */
-    .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        margin-left: 0;
-        padding-right: 0;
-        margin-top: 0;
-        flex-wrap: wrap;
-        width: 100%;
+    .nav{
+        width:100%;
+        margin:10px 0 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+        flex-wrap:wrap;
     }
 
-    .nav a {
-        font-size: 13px;
-        margin: 0;
-        padding: 4px 6px;
-        white-space: nowrap;
-        text-decoration: none;
-        line-height: 1.2;
+    .nav a{
+        margin:0;
+        font-size:13px;
+        padding:6px 8px;
     }
 
-    /* ===== HR ===== */
-    hr {
-        display: none;
+    hr{
+        display:none;
     }
 
-    /* ===== MAIN CONTENT ===== */
-    .main-content {
-        width: 100%;
-        margin: 0;
-        padding: 12px;
+    /* ================= CONTAINER ================= */
+
+    .container{
+        width:95%;
+        margin:205px auto 20px;
+        padding:0;
     }
 
-    .section {
-        margin-bottom: 18px;
-        width: 100%;
+    .card{
+        padding:15px;
+        border-radius:12px;
     }
 
-    .section h3 {
-        font-size: 15px;
-        padding: 12px;
-        border-radius: 8px;
-        margin-bottom: 10px;
+    /* ================= CARD HEADER ================= */
+
+    .card-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
     }
 
-    input {
-        width: 100%;
-        max-width: 100%;
-        margin: 6px 0;
-        padding: 14px;
-        font-size: 14px;
-        border-radius: 8px;
-        display: block;
+    .card-header h2{
+        margin:0;
+        font-size:20px;
     }
 
-    label {
-        display: block;
-        margin-top: 8px;
-        font-size: 13px;
-        font-weight: bold;
+    .header-actions{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
     }
 
-    .box {
-        display: block;
-        width: 100%;
-        margin: 8px 0;
+    .header-actions button{
+        width:100%;
     }
 
-    .box select {
-        width: 100%;
-        height: 45px;
-        font-size: 14px;
-        border-radius: 8px;
+    /* ================= SEARCH GRID ================= */
+
+    .search-grid{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:16px;
     }
 
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        font-size: 13px;
+    .field{
+        width:100%;
+    }
+
+    .field label{
+        display:block;
+        margin-bottom:6px;
+        font-size:13px;
+        font-weight:600;
+    }
+
+    .input-box{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .input-box input{
+        width:100%;
+        font-size:14px;
+    }
+
+    /* ================= DATE RANGE ================= */
+
+    .date-range{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:8px;
+    }
+
+    .date-range span{
+        text-align:center;
+        font-weight:600;
+    }
+
+    .date-range input,
+    #upStart,
+    #upEnd{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .total-section{
+        grid-column:auto;
+    }
+
+    .total-section .date-range{
+        padding:10px;
+    }
+
+    .total-section .date-range input{
+        width:100%;
+    }
+
+    /* ================= SEARCH BUTTON ================= */
+
+    .search-btn-box{
+        grid-column:auto;
+        width:100%;
+    }
+
+    .search-btn{
+        width:100%;
+        padding:13px;
+        font-size:15px;
+    }
+
+    /* ================= TABLE HEADER ================= */
+
+    .table-header{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .table-actions{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:10px;
+    }
+
+    .extract-btn1{
+        width:100%;
+        justify-content:center;
+    }
+
+    #searchInput{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    /* ================= TABLE ================= */
+
+    table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+        margin-top:15px;
+    }
+
+    thead{
+        display:table-header-group;
+    }
+
+    tbody{
+        display:table-row-group;
     }
 
     th,
-    td {
-        padding: 8px;
-        min-width: 80px;
+    td{
+        padding:10px;
+        font-size:13px;
     }
 
-    button,
-    .action-btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
-        margin-top: 8px;
-        border-radius: 8px;
+    /* ================= ACTION BUTTONS ================= */
+
+    .view-btn,
+    .delete-btn{
+        padding:6px 10px;
+        font-size:12px;
     }
 
-    center {
-        width: 100%;
-        margin-bottom: 20px;
+    /* ================= PAGINATION ================= */
+
+    .pagination{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+        align-items:center;
+        text-align:center;
     }
-}
+
+    .page-btns{
+        display:flex;
+        gap:10px;
+    }
+
+    .page-btns button{
+        width:40px;
+        height:40px;
+    }
+
+    /* ================= SUGGESTION BOX ================= */
+
+    .suggestions-box{
+        max-height:180px;
+        overflow-y:auto;
+    }
 
 }
