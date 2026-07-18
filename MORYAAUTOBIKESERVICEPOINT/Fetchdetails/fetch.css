@@ -38,334 +38,313 @@ h1 {
     padding-right: 0;
     gap: 20px;
 }
+/* ===========================
+        HEADER
+=========================== */
 
-/*For herader freeze*/
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: white;
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:#fff;
 
-    position: fixed;   /* 🔥 freeze */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;     /* stay above */
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-sizing:border-box;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-/* .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: white;
-} */
-
-
-/*Nav style */
-.nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
+.logo{
+    display:flex;
+    align-items:center;
 }
 
-/* Add spacing between links */
-.nav a {
-    margin-left: 25px;
+.logo img{
+    width:95px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
-/
-
- /* hover effect on links */
-.nav a:hover {
-    color: #1e3c72;
-    transition: 0.3s;
-}
-/* ===== HR LINE ===== */
-hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #ccc, transparent);
-    margin: 5px 40px;
+.title{
+    flex:1;
+    text-align:center;
 }
 
-
-
-.container {
-    width: 92%;
-     max-width: 1200px; 
-    /* margin: 30px auto; */
-     margin: 150px auto 20px; /* space for fixed header */
-    padding: 0 20px;
+.title h1{
+    margin:0;
+    color:#0b3d5c;
+    font-size:30px;
 }
 
-/* 🔲 CARD */
-.card {
-    background: white;
-    border-radius: 16px;
-    flex: 1 1 250px;  /* responsive cards */
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.title p{
+    margin-top:5px;
+    color:#666;
 }
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-}
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-.header-actions {
-    display: flex;
-    gap: 10px;
+.nav a{
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+    transition:.3s;
 }
 
-/* 🔘 BUTTONS */
-button {
-    cursor: pointer;
-    transition: 0.2s;
+.nav a:hover{
+    color:#1e3c72;
 }
 
-button:hover {
-    transform: translateY(-2px);
-}
+/* ===========================
+            HR
+=========================== */
 
-.reset-btn {
-    background: #eef1f7;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-
-.total-btn {
-    background: #10b981;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-
-/* 🔍 GRID */
-.search-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.total-section {
-    grid-column: 5;   /* right side */
-}
-
-.field {
-    position: relative;
-}
-
-.field label {
-    font-size: 13px;
-}
-
-/* 📦 INPUT */
-.input-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 8px;
-    background: #fff;
-}
-
-.input-box input {
-    border: none;
-    width: 100%;
-    outline: none;
-}
-
-/* 📅 */
-/* .date-range {
-    display: flex;
-    gap: 5px;
-}
- */
-.date-range input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;   /* 🔥 makes full box clickable */
-}
-
-.date-range {
-    display: flex;
-    gap: 6px;   /* increase from 5px */
-    align-items: center;
+hr{
+    border:none;
+    height:2px;
+    background:linear-gradient(to right,transparent,#ccc,transparent);
+    margin:0 40px;
 }
 
 
-.total-section .date-range {
-    border: 1px solid #e5e7eb;   /* normal border */
-    padding: 6px 8px;
-    border-radius: 10px;
-    transition: 0.3s;
+/* ===========================
+        MAIN CONTAINER
+=========================== */
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:145px auto 25px;
+    padding:0;
 }
 
-.total-section .date-range:hover {
-    border-color: #10b981;   /* 🔥 green on hover */
+
+/* ===========================
+            CARD
+=========================== */
+
+.card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
 }
 
-.total-section .date-range:focus-within {
-    border-color: #10b981;
-    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+
+/* ===========================
+        CARD HEADER
+=========================== */
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
 }
 
-#upStart, 
-#upEnd {
-    width: 100px;      /* 🔥 control size */
-    padding: 2px;
-    border-radius: 10px;  /* same rounded look */
+.header-actions{
+    display:flex;
+    gap:12px;
 }
-/* 🔍 SEARCH BUTTON */
-.search-btn {
-    width: 100%;
-    padding: 12px;
-    background: #1e3c72;
-    color: white;
-    border-radius: 10px;
-    border: none;
+
+
+/* ===========================
+        SEARCH GRID
+=========================== */
+
+.search-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    align-items:end;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field label{
+    margin-bottom:8px;
+    font-size:13px;
+    font-weight:600;
+}
+
+
+/* ===========================
+        INPUTS
+=========================== */
+
+.input-box{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:10px;
+    background:#fff;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:14px;
+}
+
+
+/* ===========================
+        DATE RANGE
+=========================== */
+
+.date-range{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.date-range input{
+    flex:1;
+}
+
+#upStart,
+#upEnd{
+    width:100%;
+}
+
+
+/* ===========================
+      TOTAL BUSINESS
+=========================== */
+
+.total-section{
+    grid-column:span 2;
+}
+
+.total-section .date-range{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:8px;
+}
+
+
+/* ===========================
+        SEARCH BUTTON
+=========================== */
+
+.search-btn-box{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:center;
+}
+
+.search-btn{
+    width:260px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#1e3c72;
+    color:#fff;
+    font-size:15px;
 }
 
 .search-btn:hover{
-	background: #16325c;
+    background:#16325c;
 }
 
-.search-btn-box {
-    grid-column: 1 / 5;   /* only left side */
-    display: flex;
-    justify-content: center;
+
+/* ===========================
+        TABLE HEADER
+=========================== */
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
 }
 
-.total-section .date-range input {
-    width: 120px;
-    padding: 6px;
+.table-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-/* 📊 TABLE */
-.table-header {
-    display: flex;
-    justify-content: space-between;
+#searchInput{
+    width:230px;
+    padding:9px;
 }
 
-.table-actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+
+/* ===========================
+            TABLE
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
 }
 
-/* search bar highlights */
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
+th{
+    background:#1e3c72;
+    color:#fff;
+    text-align:left;
 }
 
-.extract-btn1 {
-    background: #1e3c72;   /* 🔥 new color */
-    color: white;          /* text + icon white */
-    border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;              /* space between icon & text */
+th,
+td{
+    padding:12px;
+    border-bottom:1px solid #e5e5e5;
 }
 
-/* 🔥 Hover effect */
-.extract-btn1:hover {
-    background: #16325c;
+tbody tr:hover{
+    background:#f7f9fc;
 }
 
-/* 🔥 Click effect */
-.extract-btn1:active {
-    transform: scale(0.97);
-}
-table {
-    width: 100%;
-    margin-top: 20px;
+
+/* ===========================
+        PAGINATION
+=========================== */
+
+.pagination{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:25px;
 }
 
-td, th {
-    padding: 10px;
+.page-btns{
+    display:flex;
+    gap:8px;
 }
 
-/* 🔴 HIGHLIGHT */
-.danger-row {
-    background: #ff3b3b;
-    border-left: 5px solid #ff3b3b;
+.page-btns button{
+    width:38px;
+    height:38px;
 }
 
-/* 🔔 ICON */
-.reminder-icon{
-    color:#22c55e;
-    margin-left:10px;
-    cursor:pointer;
-    font-size:18px;
-}
 
-.reminder-icon:hover{
-    color:#4ade80;
-    transform:scale(1.3);
-}
+/* ===========================
+      SUGGESTIONS
+=========================== */
 
-/* 👁 & 🗑 */
-.view-btn {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 5px 8px;
-    border-radius: 6px;
-}
-
-.delete-btn {
-    background: #ef4444;
-    color: white;
-    border: none;
-    padding: 5px 8px;
-    border-radius: 6px;
-}
-
-/* 📄 PAGINATION */
-.pagination {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* 🔽 SUGGESTIONS */
-.suggestions-box {
-    position: absolute;
-    background: white;
-    border: 1px solid #ddd;
-    width: 100%;
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 999;
-}
-
-.suggestions-box div {
-    padding: 8px;
-    cursor: pointer;
-}
-
-.suggestions-box div:hover {
-    background: #f1f5f9;
-}
-
-.highlight {
-    background-color: yellow;
-    font-weight: bold;
+.suggestions-box{
+    position:absolute;
+    width:100%;
+    max-height:180px;
+    overflow-y:auto;
+    background:#fff;
+    border:1px solid #ddd;
+    z-index:999;
 }
 
 /* ========================================================= */
