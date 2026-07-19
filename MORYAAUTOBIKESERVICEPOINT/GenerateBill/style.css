@@ -334,10 +334,10 @@ center {
 
     /* Main Content */
 
-    .main-content{
-        width:100%;
-        padding:12px;
-    }
+.main-content{
+    width:100%;
+    padding:220px 12px 12px;
+}
 
     .section{
         margin-bottom:20px;
