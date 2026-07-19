@@ -339,7 +339,7 @@ marquee {
 
     .nav a {
         font-size: 13px;
-        margin: 0;
+        margin: 35PX;
         padding: 0;
         position: relative;
         top: 2px;           /* 🔥 only links slightly lower */
