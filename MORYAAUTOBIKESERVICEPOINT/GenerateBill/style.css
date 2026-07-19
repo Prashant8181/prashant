@@ -255,7 +255,7 @@ center {
         margin-top:12px;
     }
 
-    .nav a{
+    /* .nav a{
         display:flex;
         flex-direction:column;
         justify-content:center;
@@ -268,7 +268,7 @@ center {
         font-size:12px;
         font-weight:bold;
         transition:.3s;
-    }
+    } */
 
     .nav a i{
         font-size:18px;
