@@ -52,63 +52,19 @@ h1 {
     white-space:nowrap;
 }
 
-/* ===== Project Banner ===== */
-
-.project-banner {
-    width: 100%;
-    overflow: hidden;
-    background: linear-gradient(90deg, #0f172a, #1e293b);
-    color: #fff;
-    padding: 12px 0;
-    border-bottom: 2px solid #2563eb;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
-}
-
-.project-banner-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 28s linear infinite;
+.notice-marquee {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 10px 0;
     font-size: 15px;
     font-weight: 500;
+    border-top: 2px solid #2563eb;
+    border-bottom: 2px solid #2563eb;
+    letter-spacing: 0.3px;
 }
 
-.project-banner:hover .project-banner-content {
-    animation-play-state: paused;
-}
-
-.live-badge,
-.demo-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-right: 8px;
-}
-
-.live-badge {
-    background: #16a34a;
-    color: white;
-}
-
-.demo-badge {
-    background: #2563eb;
-    color: white;
-}
-
-.separator {
-    color: #94a3b8;
-    margin: 0 12px;
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.notice-marquee strong {
+    color: #38bdf8;
 }
 /* ===========================
         HEADER
