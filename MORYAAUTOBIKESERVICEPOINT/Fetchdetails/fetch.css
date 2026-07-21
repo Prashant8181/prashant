@@ -52,19 +52,26 @@ h1 {
     white-space:nowrap;
 }
 
-.notice-marquee {
-    background: #0f172a;
-    color: #ffffff;
-    padding: 10px 0;
-    font-size: 15px;
-    font-weight: 500;
-    border-top: 2px solid #2563eb;
-    border-bottom: 2px solid #2563eb;
-    letter-spacing: 0.3px;
-}
-
-.notice-marquee strong {
-    color: #38bdf8;
+marquee {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;   /* 🔥 modern premium font */
+    font-size: 16px;                                  /* clean readable */
+    font-weight: 600;                                 /* bold but classy */
+    color: #ffffff;                                   /* white text */
+    
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* 🔥 premium blue gradient */
+    
+    padding: 12px 0;                                  /* height */
+    border-radius: 8px;                               /* smooth corners */
+    
+    letter-spacing: 0.8px;                            /* stylish spacing */
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);         /* soft shadow */
+    
+    margin-top: 10px;
+    width: 100%;
+    
+    border-top: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 /* ===========================
         HEADER
