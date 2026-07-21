@@ -51,7 +51,7 @@ function fillReceipt(data){
 	
 
 	data.items.forEach((item, index) => {
-	    receiptTable.innerHTML += 
+	    receiptTable.innerHTML += `
 	    <tr>
 	        <td>${index + 1}</td>
 	        <td>${item.particular}</td>
@@ -59,6 +59,7 @@ function fillReceipt(data){
 	        <td>${item.qty}</td>
 	        <td>${item.amount}</td>
 	    </tr>
+		`;
 	});
 
     // 🖨️ AUTO PRINT
