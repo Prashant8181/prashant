@@ -174,10 +174,13 @@ th, td {
     transform: scale(1.05);
 }
 
+@media print { 
+    .back-btn-container {
+        display: none; }
 /* ==============================
    MOBILE RESPONSIVE
 ================================= */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 
     body{
         margin:0;
@@ -199,7 +202,7 @@ th, td {
     }
 
     /* Header */
-    .header{
+    /* .header{
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -228,10 +231,10 @@ th, td {
     .tagline{
         font-size:12px;
         padding:4px 8px;
-    }
+    } */
 
     /* Customer Details */
-    .row{
+    /* .row{
         flex-direction:column;
         gap:6px;
     }
@@ -239,26 +242,26 @@ th, td {
     .field{
         width:100%;
         box-sizing:border-box;
-    }
+    } */
 
     /* Table */
-    table{
+    /* table{
         font-size:12px;
     }
 
     th,
     td{
         padding:6px;
-    }
+    } */
 
     /* Total Box */
-    .total-box{
+    /* .total-box{
         width:100%;
         margin-top:15px;
-    }
+    } */
 
     /* Bottom */
-    .bottom{
+    /* .bottom{
         flex-direction:column;
         align-items:flex-start;
         gap:20px;
@@ -275,10 +278,10 @@ th, td {
     .stamp img{
         width:90px;
         height:90px;
-    }
+    } */
 
     /* Back Button */
-    .back-btn-container{
+    /* .back-btn-container{
         right:10px;
         bottom:10px;
     }
@@ -286,13 +289,13 @@ th, td {
     .back-btn{
         padding:10px 18px;
         font-size:14px;
-    }
+    } */
 
     /* Prevent table overflow */
-    table{
+    /* table{
         display:block;
         overflow-x:auto;
         white-space:nowrap;
     }
 
-}
+} */
