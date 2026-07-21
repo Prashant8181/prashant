@@ -204,7 +204,7 @@ function viewBill(index) {
     //  Store temp for receipt page
     localStorage.setItem("billData", JSON.stringify(data));
 
-    window.open("../receipt.html", "_blank");
+    window.open("/MORYAAUTOBIKESERVICEPOINT/Fetchdetails/", "_blank");
 }
 
 
