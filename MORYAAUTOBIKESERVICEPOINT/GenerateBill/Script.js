@@ -518,5 +518,5 @@ function printBill() {
     };
 
     localStorage.setItem("billData", JSON.stringify(data));
-    window.open("/MORYAAUTOBIKESERVICEPOINT/GenerateBill/Receipt/index.html","_blank");
+    window.open("/MORYAAUTOBIKESERVICEPOINT/GenerateBill/Receipt/index.html","_blank"); 
 }
