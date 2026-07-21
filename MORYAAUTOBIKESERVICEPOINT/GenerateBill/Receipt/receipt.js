@@ -58,7 +58,7 @@ function fillReceipt(data){
 	        <td>${item.rate}</td>
 	        <td>${item.qty}</td>
 	        <td>${item.amount}</td>
-	    </tr>`;
+	    </tr>
 	});
 
     // 🖨️ AUTO PRINT
