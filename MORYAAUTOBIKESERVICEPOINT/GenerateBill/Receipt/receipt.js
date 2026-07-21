@@ -3,7 +3,7 @@ window.onload = function () {
     let params = new URLSearchParams(window.location.search);
     let id = params.get("id");
 
-    // 🔵 CASE 1: From DB (Eye button)
+    //  CASE 1: From DB (Eye button)
     if(id){
         fetch(`http://localhost:8080/receipt/${id}`)
         .then(res => res.json())
@@ -14,7 +14,7 @@ window.onload = function () {
         });
     }
     
-    // 🟢 CASE 2: From localStorage (new bill)
+    //  CASE 2: From localStorage (new bill)
     else{
         let data = JSON.parse(localStorage.getItem("billData"));
 
@@ -51,7 +51,7 @@ function fillReceipt(data){
 	
 
 	data.items.forEach((item, index) => {
-	    receiptTable.innerHTML += `
+	    receiptTable.innerHTML += 
 	    <tr>
 	        <td>${index + 1}</td>
 	        <td>${item.particular}</td>
