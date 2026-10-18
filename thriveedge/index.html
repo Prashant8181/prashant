@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d2343">
+  <meta name="description" content="Discover ThriveEdge Learning Institute and Prashant Natikar's digital website management and SEO project.">
+  <title>ThriveEdge Learning Institute | Prashant Natikar</title>
+  <style>
+    :root {
+      --navy: #0d2343;
+      --blue: #203f78;
+      --gold: #e4b52d;
+      --page: #f3f5f8;
+      --ink: #20252d;
+      --muted: #626b78;
+      --white: #fff;
+      --line: #e7ebf1;
+      --shadow: 0 10px 30px rgba(25, 39, 59, .07);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.55 Arial, Helvetica, sans-serif; }
+    a { color: inherit; }
+    .announcement { background: var(--navy); color: var(--gold); overflow: hidden; }
+    .marquee { display: flex; gap: 34px; width: max-content; min-height: 44px; align-items: center; white-space: nowrap; font-size: 1rem; font-weight: 600; animation: move 28s linear infinite; }
+    .announcement:hover .marquee { animation-play-state: paused; }
+    @keyframes move { to { transform: translateX(-50%); } }
+    .header { min-height: 70px; padding: 12px max(22px, calc((100% - 1160px)/2)); display: flex; align-items: center; justify-content: space-between; gap: 20px; background: #fff; border-bottom: 1px solid var(--line); }
+    .brand { text-decoration: none; line-height: 1.25; }
+    .brand strong { display: block; font-size: 1.05rem; }
+    .brand small { color: var(--muted); font-size: .8rem; }
+    .nav { display: flex; align-items: center; gap: 23px; }
+    .nav a { text-decoration: none; font-size: .88rem; font-weight: 600; }
+    .nav a:hover, .nav a.active { color: var(--blue); }
+    .nav a.active { border-bottom: 2px solid var(--blue); padding-bottom: 5px; }
+    .menu { display: none; border: 1px solid var(--line); border-radius: 8px; background: white; padding: 8px 11px; font: inherit; }
+    main { width: min(1160px, calc(100% - 36px)); margin: 22px auto 0; }
+    .panel { background: var(--white); border: 1px solid rgba(255,255,255,.9); border-radius: 16px; box-shadow: var(--shadow); margin-bottom: 16px; }
+    .hero { display: grid; grid-template-columns: 1fr .95fr; align-items: center; gap: 28px; padding: 22px; }
+    .hero-copy { padding: 12px 6px 12px 12px; }
+    .tag { display: inline-block; border-radius: 999px; padding: 5px 12px; background: #e8edf7; color: var(--blue); font-size: .72rem; font-weight: 800; letter-spacing: .06em; }
+    h1 { margin: 14px 0 14px; font-size: clamp(2.25rem, 4.5vw, 3.8rem); line-height: 1.04; letter-spacing: -.045em; }
+    h1 span, .section-title span { color: var(--blue); }
+    .hero-copy > p { max-width: 510px; color: #505b6a; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 21px; }
+    .btn { min-height: 43px; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 10px 17px; border-radius: 9px; text-decoration: none; font-weight: 700; font-size: .87rem; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-primary:hover { background: #18325f; }
+    .btn-secondary { border: 1px solid #cbd4e2; color: var(--blue); background: #fff; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 9px 16px; margin-top: 20px; color: var(--muted); font-size: .78rem; }
+    .hero-tags span::first-letter { color: var(--blue); }
+    .hero-image-wrap { position: relative; }
+    .hero-image { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
+    .image-label { position: absolute; left: 12px; bottom: 12px; background: rgba(255,255,255,.95); border-radius: 8px; padding: 9px 12px; }
+    .image-label strong { display: block; color: var(--blue); font-size: .78rem; letter-spacing: .06em; }
+    .image-label small { color: var(--muted); }
+    .section { padding: 23px 25px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 18px; margin-bottom: 19px; }
+    .section-heading h2 { font-size: clamp(1.45rem, 2.7vw, 2rem); letter-spacing: -.035em; line-height: 1.2; margin: 0 0 6px; }
+    .section-heading p { color: var(--muted); font-size: .9rem; max-width: 690px; margin: 0; }
+    .small-label { color: var(--blue); font-size: .7rem; font-weight: 800; letter-spacing: .1em; margin: 0 0 7px; }
+    .course-grid, .role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .course-card, .role-card { border: 1px solid #edf0f4; border-radius: 12px; padding: 15px; background: #fff; }
+    .icon { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 50%; background: #e8edf7; color: var(--blue); font-size: 1.15rem; margin-bottom: 10px; }
+    .course-card h3, .role-card h3 { font-size: .91rem; margin: 0 0 5px; }
+    .course-card p, .role-card p { color: var(--muted); font-size: .8rem; margin: 0; }
+    .role-area { background: #edf0f4; }
+    .role-area .section-heading { margin-bottom: 17px; }
+    .role-area .role-card { box-shadow: 0 5px 18px rgba(25,39,59,.04); }
+    .role-area .icon { border-radius: 11px; }
+    .cta { padding: 24px 27px; display: flex; align-items: center; justify-content: space-between; gap: 22px; background: #e7edf7; }
+    .cta h2 { font-size: clamp(1.5rem, 2.7vw, 2rem); line-height: 1.2; margin: 0 0 6px; }
+    .cta p { margin: 0; color: #505b6a; font-size: .9rem; max-width: 640px; }
+    .cta .buttons { margin: 0; flex-shrink: 0; }
+    footer { width: min(1160px, calc(100% - 36px)); margin: 0 auto; padding: 22px 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    footer strong { display: block; font-size: .92rem; }
+    footer small, .copyright { color: var(--muted); font-size: .78rem; }
+    footer a { color: var(--blue); font-size: .85rem; font-weight: 700; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 8px; }
+      .hero-image { height: 300px; }
+      .course-grid, .role-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-heading { align-items: flex-start; flex-direction: column; }
+      .cta { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 620px) {
+      .header { position: relative; min-height: 64px; padding: 10px 18px; }
+      .menu { display: block; }
+      .nav { display: none; position: absolute; z-index: 5; left: 0; right: 0; top: 100%; padding: 16px 20px; background: white; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 14px; }
+      .nav.open { display: flex; }
+      .marquee { min-height: 40px; font-size: .86rem; }
+      main { width: calc(100% - 22px); margin-top: 12px; }
+      .panel { border-radius: 13px; margin-bottom: 12px; }
+      .hero { padding: 16px; gap: 17px; }
+      .hero-copy { padding: 4px; }
+      h1 { font-size: clamp(2.3rem, 11vw, 3.2rem); }
+      .hero-image { height: 220px; }
+      .section { padding: 20px 16px; }
+      .course-grid, .role-grid { grid-template-columns: 1fr; }
+      .course-card, .role-card { display: grid; grid-template-columns: 42px 1fr; column-gap: 12px; align-items: center; padding: 13px; }
+      .icon { grid-row: span 2; margin: 0; }
+      .course-card h3, .role-card h3 { align-self: end; }
+      .course-card p, .role-card p { align-self: start; }
+      .cta { padding: 21px 17px; }
+      .cta .buttons, .cta .btn { width: 100%; }
+      footer { width: calc(100% - 28px); align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement" aria-label="Announcement">
+    <div class="marquee" aria-hidden="true">
+      <span>📣 OFFICIAL UPDATE: THRIVEEDGE LEARNING INSTITUTE — WEBSITE MANAGEMENT &amp; GOOGLE SEO</span>
+      <span>✦ BUILDING A STRONGER DIGITAL PRESENCE</span>
+      <span>📣 OFFICIAL UPDATE: THRIVEEDGE LEARNING INSTITUTE — WEBSITE MANAGEMENT &amp; GOOGLE SEO</span>
+      <span>✦ BUILDING A STRONGER DIGITAL PRESENCE</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="https://prashantnatekar.in/">
+      <strong>Prashant Natikar</strong>
+      <small>code, work, and the places in between.</small>
+    </a>
+    <button class="menu" id="menuButton" aria-expanded="false" aria-controls="siteNav">☰ Menu</button>
+    <nav class="nav" id="siteNav" aria-label="Main navigation">
+      <a href="https://prashantnatekar.in/">Home</a>
+      <a href="https://prashantnatekar.in/#projects">Projects</a>
+      <a class="active" href="#about" aria-current="page">ThriveEdge</a>
+      <a href="https://prashantnatekar.in/#quote">Quote</a>
+      <a href="https://prashantnatekar.in/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel hero">
+      <div class="hero-copy">
+        <span class="tag">NEW COLLABORATION</span>
+        <h1>Thrive<span>Edge</span><br>Learning Institute</h1>
+        <p>I’m proud to announce that I’m managing the website and Google SEO initiatives for ThriveEdge Learning Institute.</p>
+        <div class="buttons">
+          <!-- Replace #about with ThriveEdge's official website URL when available. -->
+          <a class="btn btn-primary" href="#about">Explore ThriveEdge ↗</a>
+          <a class="btn btn-secondary" href="#my-role">View My Role ↓</a>
+        </div>
+        <div class="hero-tags"><span>✓ Website Management</span><span>✓ Google SEO</span><span>✓ Digital Presence</span></div>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Bright modern workspace" fetchpriority="high">
+        <div class="image-label"><strong>THRIVEEDGE</strong><small>Learning Institute · Learn · Grow · Thrive</small></div>
+      </div>
+    </section>
+
+    <section class="panel section" id="about">
+      <div class="section-heading">
+        <div>
+          <p class="small-label">ABOUT THRIVEEDGE</p>
+          <h2>Learning for personal and professional growth.</h2>
+          <p>ThriveEdge is a professional learning institute focused on developing confidence, communication and practical skills for new opportunities.</p>
+        </div>
+      </div>
+      <div class="course-grid">
+        <article class="course-card"><span class="icon" aria-hidden="true">♟</span><h3>Personality Development</h3><p>Build confidence and a positive mindset.</p></article>
+        <article class="course-card"><span class="icon" aria-hidden="true">◉</span><h3>Communication Skills</h3><p>Improve speaking and interpersonal skills.</p></article>
+        <article class="course-card"><span class="icon" aria-hidden="true">↗</span><h3>Career Guidance</h3><p>Prepare for academic and professional growth.</p></article>
+        <article class="course-card"><span class="icon" aria-hidden="true">▥</span><h3>Skill Building</h3><p>Develop practical skills for the future.</p></article>
+      </div>
+    </section>
+
+    <section class="panel section role-area" id="my-role">
+      <div class="section-heading">
+        <div>
+          <p class="small-label">MY CONTRIBUTION</p>
+          <h2>My Contribution <span style="color:var(--blue)">(Digital Role)</span></h2>
+          <p>Helping ThriveEdge build a clear, useful and discoverable online presence.</p>
+        </div>
+      </div>
+      <div class="role-grid">
+        <article class="role-card"><span class="icon" aria-hidden="true">◎</span><h3>Website Management</h3><p>Design updates, content handling and maintenance.</p></article>
+        <article class="role-card"><span class="icon" aria-hidden="true">⌕</span><h3>Google SEO</h3><p>On-page SEO and search indexing foundations.</p></article>
+        <article class="role-card"><span class="icon" aria-hidden="true">▤</span><h3>Content Optimization</h3><p>Clear content that explains the institute and courses.</p></article>
+        <article class="role-card"><span class="icon" aria-hidden="true">▥</span><h3>Online Presence</h3><p>Building a consistent digital identity over time.</p></article>
+      </div>
+    </section>
+
+    <section class="panel cta">
+      <div>
+        <h2>Let’s Build Better Learners Together.</h2>
+        <p>Discover ThriveEdge Learning Institute and explore learning opportunities for personal and professional growth.</p>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#about">Explore ThriveEdge ↗</a>
+        <a class="btn btn-secondary" href="https://prashantnatekar.in/">Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Prashant Natikar</strong><small>code, work, and the places in between.</small></div>
+    <a href="https://prashantnatekar.in/">Back to My Portfolio ↗</a>
+    <span class="copyright">© <span id="year"></span> Prashant Natikar</span>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const siteNav = document.getElementById("siteNav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
